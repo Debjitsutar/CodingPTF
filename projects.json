@@ -1,0 +1,94 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "title": "Largest element in an array",
+        "languages": ["Java", "C++", "Python", "C"],
+        "practiceLink": "https://www.geeksforgeeks.org/problems/largest-element-in-array4009/0",
+        "practiceSite": "gfg.png",
+        "status": "Untouched",
+        "companies": ["tcs.jpg", "accenture.png"]
+      },
+      {
+        "id": 2,
+        "title": "Second largest element in an array",
+        "languages": ["Java", "Python", "C"],
+        "practiceLink": "https://www.geeksforgeeks.org/problems/second-largest3735/1",
+        "practiceSite": "gfg.png",
+        "status": "Untouched",
+        "companies": ["microsoft.png", "amazon.jpeg", "Capgemini.jpg", "accenture.png"]
+      },
+      {
+        "id": 3,
+        "title": "Check if array is sorted",
+        "languages": ["Java", "C++", "Python", "C"],
+        "practiceLink": "https://www.naukri.com/code360/problems/ninja-and-the-sorted-check_6581957",
+        "practiceSite": "cn.png",
+        "status": "Untouched",
+        "companies": ["google.png", "amazon.jpeg", "tcs.jpg"]
+      },
+      {
+        "id": 4,
+        "title": "Remove duplicates from sorted array",
+        "languages": ["Java", "C++", "Python"],
+        "practiceLink": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/",
+        "practiceSite": "leetcode.png",
+        "status": "Untouched",
+        "companies": ["microsoft.png", "google.png", "amazon.jpeg"]
+      },
+      {
+        "id": 5,
+        "title": "Rotate an array by one place",
+        "languages": ["C++", "Python", "C"],
+        "practiceLink": "https://leetcode.com/problems/rotate-array/",
+        "practiceSite": "leetcode.png",
+        "status": "Untouched",
+        "companies": ["Capgemini.jpg", "tcs.jpg", "accenture.png"]
+      },
+      {
+        "id": 6,
+        "title": "Rotate an array by d places",
+        "languages": ["Java", "C++", "Python", "C"],
+        "practiceLink": "https://leetcode.com/problems/two-sum/description/",
+        "practiceSite": "leetcode.png",
+        "status": "Untouched",
+        "companies": ["microsoft.png", "google.png", "amazon.jpeg", "accenture.png", "Capgemini.jpg"]
+      },
+      {
+        "id": 7,
+        "title": "Move zeroes to end",
+        "languages": ["Java", "C++", "Python", "C"],
+        "practiceLink": "https://leetcode.com/problems/two-sum/description/",
+        "practiceSite": "cn.png",
+        "status": "Untouched",
+        "companies": ["google.png", "microsoft.png", "netflix.png"]
+      },
+      {
+        "id": 8,
+        "title": "Linear Search",
+        "languages": ["Java", "Python", "C"],
+        "practiceLink": "https://leetcode.com/problems/two-sum/description/",
+        "practiceSite": "leetcode.png",
+        "status": "Untouched",
+        "companies": ["accenture.png", "tcs.jpg", "Capgemini.jpg"]
+      },
+      {
+        "id": 9,
+        "title": "Find missing number in an array",
+        "languages": ["Java", "C++", "Python", "C"],
+        "practiceLink": "https://leetcode.com/problems/two-sum/description/",
+        "practiceSite": "gfg.png",
+        "status": "Untouched",
+        "companies": ["microsoft.png", "google.png", "Capgemini.jpg", "accenture.png"]
+      },
+      {
+        "id": 10,
+        "title": "Medium consecutive ones",
+        "languages": ["C++", "Python", "C"],
+        "practiceLink": "https://leetcode.com/problems/two-sum/description/",
+        "practiceSite": "leetcode.png",
+        "status": "Untouched",
+        "companies": ["google.png", "microsoft.png", "amazon.jpeg", "netflix.png"]
+      }
+    ]
+  }

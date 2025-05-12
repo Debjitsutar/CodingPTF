@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML to PDF Download</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #content {
+      background: #f4f4f4;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+    }
+    button {
+      display: block;
+      margin: 30px auto 0;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="content">
+    <h1>Hello PDF!</h1>
+    <p>This is a sample HTML content that will be converted into a downloadable PDF file using JavaScript.</p>
+    <ul>
+      <li>It works with styled content</li>
+      <li>Preserves layout and fonts</li>
+      <li>Super easy to implement!</li>
+    </ul>
+  </div>
+
+  <button onclick="downloadPDF()">Download as PDF</button>
+
+  <script>
+    function downloadPDF() {
+      const element = document.getElementById('content');
+      html2pdf()
+        .set({
+          margin: 0.5,
+          filename: 'converted.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 2 },
+          jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+        })
+        .from(element)
+        .save();
+    }
+  </script>
+
+</body>
+</html>

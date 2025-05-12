@@ -1,0 +1,225 @@
+data = {
+  "questions": [
+    {
+      "id": 1,
+      "title": "Largest element in an array",
+      "chapter": "Arrays",
+      "subtopic": "Easy",
+      "languages": ["Java", "C++", "Python", "C"],
+      "practiceLink": "https://www.geeksforgeeks.org/problems/largest-element-in-array4009/0",
+      "practiceSite": "gfg.png",
+      "status": "Unattempted",
+      "companies": ["tcs.jpg", "accenture.png"],
+      "users": [["101","Attempted"], ["102","Unattempted"], ["103","Attempted"], ["104","Unattempted"], ["105","Attempted"]]
+    },
+    {
+      "id": 2,
+      "title": "Reverse a string",
+      "chapter": "Strings",
+      "subtopic": "Easy",
+      "languages": ["Java", "Python", "C"],
+      "practiceLink": "https://www.geeksforgeeks.org/write-a-c-program-to-reverse-a-string/",
+      "practiceSite": "gfg.png",
+      "status": "Completed",
+      "companies": ["tcs.jpg"]
+    },
+    {
+      "id": 3,
+      "title": "Detect cycle in a graph",
+      "chapter": "Graph",
+      "subtopic": "Medium",
+      "languages": ["C++", "Java", "Python"],
+      "practiceLink": "https://leetcode.com/problems/course-schedule/",
+      "practiceSite": "leetcode.png",
+      "status": "Review",
+      "companies": ["amazon.jpeg"]
+    },
+    {
+      "id": 4,
+      "title": "Inorder traversal of a binary tree",
+      "chapter": "Trees",
+      "subtopic": "Easy",
+      "languages": ["Java", "Python", "C"],
+      "practiceLink": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
+      "practiceSite": "leetcode.png",
+      "status": "Attempted",
+      "companies": ["google.png"]
+    },
+    {
+      "id": 5,
+      "title": "Longest common subsequence",
+      "chapter": "Dynamic Programming",
+      "subtopic": "Medium",
+      "languages": ["Java", "C++", "Python"],
+      "practiceLink": "https://leetcode.com/problems/longest-common-subsequence/",
+      "practiceSite": "leetcode.png",
+      "status": "Completed",
+      "companies": ["microsoft.png"]
+    },
+    {
+      "id": 6,
+      "title": "Reverse a linked list",
+      "chapter": "Linked List",
+      "subtopic": "Easy",
+      "languages": ["Java", "Python", "C"],
+      "practiceLink": "https://leetcode.com/problems/reverse-linked-list/",
+      "practiceSite": "leetcode.png",
+      "status": "Attempted",
+      "companies": ["amazon.jpeg"]
+    },
+    {
+      "id": 7,
+      "title": "Check for balanced parentheses",
+      "chapter": "Strings",
+      "subtopic": "Medium",
+      "languages": ["C++", "Java", "Python"],
+      "practiceLink": "https://leetcode.com/problems/valid-parentheses/",
+      "practiceSite": "leetcode.png",
+      "status": "Review",
+      "companies": ["microsoft.png"]
+    },
+    {
+      "id": 8,
+      "title": "Topological Sort",
+      "chapter": "Graph",
+      "subtopic": "Hard",
+      "languages": ["Java", "Python"],
+      "practiceLink": "https://leetcode.com/problems/course-schedule-ii/",
+      "practiceSite": "leetcode.png",
+      "status": "Unattempted",
+      "companies": ["google.png"]
+    },
+    {
+      "id": 9,
+      "title": "Height of a binary tree",
+      "chapter": "Trees",
+      "subtopic": "Medium",
+      "languages": ["Java", "C++"],
+      "practiceLink": "https://www.geeksforgeeks.org/write-a-c-program-to-find-the-height-or-depth-of-a-tree/",
+      "practiceSite": "gfg.png",
+      "status": "Attempted",
+      "companies": ["accenture.png"]
+    },
+    {
+      "id": 10,
+      "title": "0/1 Knapsack",
+      "chapter": "Dynamic Programming",
+      "subtopic": "Hard",
+      "languages": ["Java", "C++", "Python"],
+      "practiceLink": "https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/",
+      "practiceSite": "gfg.png",
+      "status": "Completed",
+      "companies": ["google.png"]
+    },
+    {
+      "id": 11,
+      "title": "Detect loop in linked list",
+      "chapter": "Linked List",
+      "subtopic": "Medium",
+      "languages": ["Java", "C++", "Python"],
+      "practiceLink": "https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/",
+      "practiceSite": "gfg.png",
+      "status": "Review",
+      "companies": ["microsoft.png"]
+    },
+    {
+      "id": 12,
+      "title": "Kth largest element",
+      "chapter": "Arrays",
+      "subtopic": "Hard",
+      "languages": ["Java", "C++"],
+      "practiceLink": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+      "practiceSite": "leetcode.png",
+      "status": "Unattempted",
+      "companies": ["amazon.jpeg"]
+    },
+    {
+      "id": 13,
+      "title": "Anagram check",
+      "chapter": "Strings",
+      "subtopic": "Easy",
+      "languages": ["Python", "Java"],
+      "practiceLink": "https://leetcode.com/problems/valid-anagram/",
+      "practiceSite": "leetcode.png",
+      "status": "Completed",
+      "companies": ["accenture.png"]
+    },
+    {
+      "id": 14,
+      "title": "Find bridges in a graph",
+      "chapter": "Graph",
+      "subtopic": "Hard",
+      "languages": ["C++", "Java"],
+      "practiceLink": "https://www.geeksforgeeks.org/bridge-in-a-graph/",
+      "practiceSite": "gfg.png",
+      "status": "Attempted",
+      "companies": ["google.png"]
+    },
+    {
+      "id": 15,
+      "title": "Lowest common ancestor",
+      "chapter": "Trees",
+      "subtopic": "Hard",
+      "languages": ["Java", "Python"],
+      "practiceLink": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
+      "practiceSite": "leetcode.png",
+      "status": "Completed",
+      "companies": ["tcs.jpg"]
+    },
+    {
+      "id": 16,
+      "title": "Minimum number of coins",
+      "chapter": "Dynamic Programming",
+      "subtopic": "Medium",
+      "languages": ["Java", "C++", "Python"],
+      "practiceLink": "https://www.geeksforgeeks.org/find-minimum-number-of-coins-that-make-a-change/",
+      "practiceSite": "gfg.png",
+      "status": "Attempted",
+      "companies": ["capgemini.jpg"]
+    },
+    {
+      "id": 17,
+      "title": "Add two numbers represented by linked list",
+      "chapter": "Linked List",
+      "subtopic": "Hard",
+      "languages": ["Java", "Python"],
+      "practiceLink": "https://leetcode.com/problems/add-two-numbers/",
+      "practiceSite": "leetcode.png",
+      "status": "Review",
+      "companies": ["netflix.png"]
+    },
+    {
+      "id": 18,
+      "title": "Sort an array of 0s, 1s and 2s",
+      "chapter": "Arrays",
+      "subtopic": "Medium",
+      "languages": ["C", "C++", "Python"],
+      "practiceLink": "https://leetcode.com/problems/sort-colors/",
+      "practiceSite": "leetcode.png",
+      "status": "Attempted",
+      "companies": ["accenture.png"]
+    },
+    {
+      "id": 19,
+      "title": "Group anagrams",
+      "chapter": "Strings",
+      "subtopic": "Hard",
+      "languages": ["Java", "C++", "Python"],
+      "practiceLink": "https://leetcode.com/problems/group-anagrams/",
+      "practiceSite": "leetcode.png",
+      "status": "Review",
+      "companies": ["google.png"]
+    },
+    {
+      "id": 20,
+      "title": "Detect and remove loop in linked list",
+      "chapter": "Linked List",
+      "subtopic": "Medium",
+      "languages": ["Java", "Python"],
+      "practiceLink": "https://www.geeksforgeeks.org/detect-and-remove-loop-in-a-linked-list/",
+      "practiceSite": "gfg.png",
+      "status": "Completed",
+      "companies": ["tcs.jpg"]
+    }
+  ]
+};
