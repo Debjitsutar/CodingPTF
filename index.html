@@ -1340,18 +1340,19 @@
             </a>
           </div>
           <div class="nav-item">
-            <a class="nav-link " href="#" data-bs-toggle="collapse" data-bs-target="#projects" role="button"
-              aria-expanded="false" aria-controls="projects">
-              <span class="material-symbols-outlined me-3">list_alt</span> Arrays
-            </a>
-            <div class="collapse " id="projects">
-              <nav class="nav nav-pills" >
-                <a class="nav-link " href="projects.html">Easy</a>
-                <a class="nav-link " href="project.html">Medium</a>
-                <a class="nav-link " href="project-new.html">Hard</a>
-              </nav>
-            </div>
-          </div>
+  <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#projects" role="button"
+     aria-expanded="false" aria-controls="projects">
+    <span class="material-symbols-outlined me-3">list_alt</span> Arrays
+  </a>
+  <div class="collapse" id="projects">
+    <nav class="nav nav-pills flex-column align-items-start">
+      <a class="nav-link" href="projects.html">Easy</a>
+      <a class="nav-link" href="project.html">Medium</a>
+      <a class="nav-link" href="project-new.html">Hard</a>
+    </nav>
+  </div>
+</div>
+
 
           <div class="nav-item">
             <a class="nav-link " href="#" data-bs-toggle="collapse" data-bs-target="#strings" role="button"
@@ -1360,7 +1361,7 @@
               Strings
             </a>
             <div class="collapse " id="strings">
-              <nav class="nav nav-pills">
+              <nav class="nav nav-pills flex-column align-items-start">
                 <a class="nav-link " href="string1.html">Easy</a>
                 <a class="nav-link " href="string2.html">Medium</a>
                 <a class="nav-link " href="string3.html">Hard</a>
@@ -1373,7 +1374,7 @@
               <span class="material-symbols-outlined">merge_type</span>&nbsp; Linked List
             </a>
             <div class="collapse " id="linkedlist">
-              <nav class="nav nav-pills">
+              <nav class="nav nav-pills flex-column align-items-start">
                 <a class="nav-link " href="ll1.html">Easy</a>
                 <a class="nav-link " href="ll2.html">Medium</a>
                 <a class="nav-link " href="ll3.html">Hard</a>
@@ -1387,7 +1388,7 @@
               <span class="material-symbols-outlined">share</span>&nbsp; Trees
             </a>
             <div class="collapse " id="trees">
-              <nav class="nav nav-pills">
+              <nav class="nav nav-pills flex-column align-items-start">
                 <a class="nav-link " href="trees1.html">Easy</a>
                 <a class="nav-link " href="trees2.html">Medium</a>
                 <a class="nav-link " href="trees3.html">Hard</a>
@@ -1401,7 +1402,7 @@
               <span class="material-symbols-outlined">account_tree</span>&nbsp; Graphs
             </a>
             <div class="collapse " id="graphs">
-              <nav class="nav nav-pills">
+              <nav class="nav nav-pills flex-column align-items-start">
                 <a class="nav-link " href="graph1.html">Easy</a>
                 <a class="nav-link " href="graph2.html">Medium</a>
                 <a class="nav-link " href="graph3.html">Hard</a>
@@ -1416,7 +1417,7 @@
 
             </a>
             <div class="collapse " id="dps">
-              <nav class="nav nav-pills">
+              <nav class="nav nav-pills flex-column align-items-start">
                 <a class="nav-link " href="DP1.html">Easy</a>
                 <a class="nav-link " href="DP2.html">Medium</a>
                 <a class="nav-link " href="DP3.html">Hard</a>
@@ -1430,7 +1431,7 @@
 
             </a>
             <div class="collapse " id="practice">
-              <nav class="nav nav-pills">
+              <nav class="nav nav-pills flex-column align-items-start">
                 <a class="nav-link " href="coding.html">Coding</a>
                 <a class="nav-link " href="post.html">Posts</a>
 
@@ -1446,7 +1447,7 @@
               <span class="material-symbols-outlined me-3">person</span> Account
             </a>
             <div class="collapse " id="account">
-              <nav class="nav nav-pills">
+              <nav class="nav nav-pills flex-column align-items-start">
                 <a class="nav-link " href="account.html">Account overview</a>
                 
               </nav>
@@ -1459,7 +1460,7 @@
               <span class="material-symbols-outlined me-3">login</span> Authentication
             </a>
             <div class="collapse" id="mdoals">
-              <nav class="nav nav-pills">
+              <nav class="nav nav-pills flex-column align-items-start">
                 <!-- Corrected Modal Trigger -->
                 <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">Sign In</a>
                 <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
@@ -1476,7 +1477,7 @@
         <h3 class="fs-base px-3 mb-4 text-start">About Us</h3>
 
         <!-- Nav -->
-        <nav class="navbar-nav nav-pills mb-xl-7">
+        <nav class="navbar-nav nav-pills mb-xl-7 flex-column align-items-start">
           <div class="nav-item">
             <a class="nav-link " href="faqs.html" target="_blank">
               <span class="material-symbols-outlined me-3">sticky_note_2</span>Common FAQs</a>
@@ -1538,17 +1539,19 @@
         </nav>
 
         <!-- Card -->
-        <div class="card mt-auto">
-          <div class="card-body">
-            <!-- Heading -->
-            <h6>Need help?</h6>
+      <div class="card mt-auto">
+  <div class="card-body text-start"> <!-- Added text-start -->
+    <!-- Heading -->
+    <h6>Need help?</h6>
 
-            <!-- Text -->
-            <p class="text-body-secondary mb-0">Feel free to reach out to us via the 'Contact Us' option, or click<a
-                href="contactus.html" target="_blank"> here.</a>
-          </div>
-          </p>
-        </div>
+    <!-- Text -->
+    <p class="text-body-secondary mb-0">
+      Feel free to reach out to us via the 'Contact Us' option, or click
+      <a href="contactus.html" target="_blank">here</a>.
+    </p>
+  </div>
+</div>
+
       </div>
     </div>
     </div>
