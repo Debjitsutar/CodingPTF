@@ -821,3 +821,23 @@ body {
     white-space: nowrap;
 }
 }
+
+/* Blur effect for modal backdrop and navbar */
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.627);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/* Fade and blur effect for navbar when modal is open */
+body.modal-open .navbar {
+    filter: blur(2px) opacity(0.8);
+    transition: filter 0.3s ease;
+    pointer-events: none; /* Prevents interaction with navbar while modal is open */
+}
+
+/* Optional: Blur effect on main content when modal is open */
+body.modal-open main {
+    filter: blur(2px);
+    transition: filter 0.3s ease;
+}
