@@ -280,127 +280,135 @@
   
   <body data-new-gr-c-s-check-loaded="14.1217.0" data-gr-ext-installed="">
   
-    <!-- Sign-IN Modal -->
-      <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="signinModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header border-bottom-0">
-                    
-                </div>
-                <div class="modal-body p-4 pt-0">
-                    <h1 class="h4 mb-4 text-center">Sign in</h1>
-                    <br>
-                    <form>
-                        <div class="mb-3">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control" placeholder="you@example.com">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Password</label>
-                            <input type="password" class="form-control" placeholder="••••••••">
-                        </div>
-                        <hr class="my-4">
-                        <button type="submit" class="btn w-100 mb-3" style="background-color: #f9bc06; color: #000;">Sign In</button>
-                         <div class="text-center">  <!-- Changed from text-center -->
-                        <span class="text-muted small">Don't have an account?</span>
-                        <a href="#" class="d-block text-muted small mt-2" data-bs-toggle="modal" data-bs-target="#signupModal">
-                            Sign up
-                        </a>
-                    </div>
-                    </form>
-                </div>
-            </div>
+  <!-- Sign-IN Modal -->
+  <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="signinModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-bottom-0">
+
         </div>
+        <div class="modal-body p-4 pt-0">
+          <h1 class="h4 mb-4 text-center">Sign in</h1>
+          <br>
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" placeholder="you@example.com">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" placeholder="••••••••">
+            </div>
+            <hr class="my-4">
+            <button type="submit" class="btn w-100 mb-3" style="background-color: #f9bc06; color: #000;">Sign
+              In</button>
+            <div class="text-center">
+              <p class="text-muted small mb-0">
+                Don't have an account?
+                <a href="#" class="text-muted ms-1" data-bs-toggle="modal" data-bs-target="#signupModal">
+                  Sign up
+                </a>
+              </p>
+            </div>
+
+          </form>
+        </div>
+      </div>
     </div>
+  </div>
 
   <!-- Sign Up Modal -->
-<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-bottom-0">
-                
-            </div>
-            <div class="modal-body p-4 pt-0 text-start">  <!-- Added text-start here -->
-                <h1 class="h4 mb-4">Sign up</h1>  <!-- Removed text-center -->
-                <form>
-                    <!-- Name Row -->
-                    <div class="row mb-3 text-start">
-                        <div class="col-md-4">
-                            <label class="form-label d-block text-start">First Name</label>
-                            <input type="text" class="form-control" placeholder="First" required>
-                        </div>
-                        <div class="col-md-4">
-                            <label class="form-label d-block text-start">Middle Name</label>
-                            <input type="text" class="form-control" placeholder="Middle (optional)">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="form-label d-block text-start">Last Name</label>
-                            <input type="text" class="form-control" placeholder="Last" required>
-                        </div>
-                    </div>
-                    
-                    <!-- Email -->
-                    <div class="mb-3 text-start">
-                        <label class="form-label d-block text-start">Email</label>
-                        <input type="email" class="form-control" placeholder="you@example.com" required>
-                    </div>
-                    
-                    <!-- Passwords -->
-                    <div class="row mb-3 text-start">
-                        <div class="col-md-6">
-                            <label class="form-label d-block text-start">Password</label>
-                            <input type="password" class="form-control" placeholder="••••••••" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label d-block text-start">Confirm Password</label>
-                            <input type="password" class="form-control" placeholder="••••••••" required>
-                        </div>
-                    </div>
-                    
-                    <!-- College Info -->
-                    <div class="mb-3 text-start">
-                        <label class="form-label d-block text-start">College/University Name</label>
-                        <input type="text" class="form-control" placeholder="Your college name" required>
-                    </div>
-                    
-                    <!-- Branch and Year -->
-                    <div class="row mb-3 text-start">
-                        <div class="col-md-6">
-                            <label class="form-label d-block text-start">Branch/Department</label>
-                            <input type="text" class="form-control" placeholder="e.g. Computer Science" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label d-block text-start">Passing Year</label>
-                            <select class="form-select">
-                                <option value="" disabled selected>Select year</option>
-                                <option>2023</option>
-                                <option>2024</option>
-                                <option>2025</option>
-                                <option>2026</option>
-                                <option>2027</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <hr class="my-4">
-                    
-                    <!-- Submit Button -->
-                    <button type="submit" class="btn w-100 mb-3 text-center" style="background-color: #f9bc06; color: #000;">
-                        Create Account
-                    </button>
-                    
-                    <!-- Sign in Link -->
-                    <div class="text-center">  <!-- Changed from text-center -->
-                        <span class="text-muted small">Already have an account?</span>
-                        <a href="#" class="d-block text-muted small mt-2" data-bs-toggle="modal" data-bs-target="#signinModal">
-                            Sign in
-                        </a>
-                    </div>
-                </form>
-            </div>
+      <div class="modal-content">
+        <div class="modal-header border-bottom-0">
+
         </div>
+        <div class="modal-body p-4 pt-0 text-start">
+          <!-- Added text-start here -->
+          <h1 class="h4 mb-4">Sign up</h1> <!-- Removed text-center -->
+          <form>
+            <!-- Name Row -->
+            <div class="row mb-3 text-start">
+              <div class="col-md-4">
+                <label class="form-label d-block text-start">First Name</label>
+                <input type="text" class="form-control" placeholder="First" required>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label d-block text-start">Middle Name</label>
+                <input type="text" class="form-control" placeholder="Middle (optional)">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label d-block text-start">Last Name</label>
+                <input type="text" class="form-control" placeholder="Last" required>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3 text-start">
+              <label class="form-label d-block text-start">Email</label>
+              <input type="email" class="form-control" placeholder="you@example.com" required>
+            </div>
+
+            <!-- Passwords -->
+            <div class="row mb-3 text-start">
+              <div class="col-md-6">
+                <label class="form-label d-block text-start">Password</label>
+                <input type="password" class="form-control" placeholder="••••••••" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label d-block text-start">Confirm Password</label>
+                <input type="password" class="form-control" placeholder="••••••••" required>
+              </div>
+            </div>
+
+            <!-- College Info -->
+            <div class="mb-3 text-start">
+              <label class="form-label d-block text-start">College/University Name</label>
+              <input type="text" class="form-control" placeholder="Your college name" required>
+            </div>
+
+            <!-- Branch and Year -->
+            <div class="row mb-3 text-start">
+              <div class="col-md-6">
+                <label class="form-label d-block text-start">Branch/Department</label>
+                <input type="text" class="form-control" placeholder="e.g. Computer Science" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label d-block text-start">Passing Year</label>
+                <select class="form-select">
+                  <option value="" disabled selected>Select year</option>
+                  <option>2023</option>
+                  <option>2024</option>
+                  <option>2025</option>
+                  <option>2026</option>
+                  <option>2027</option>
+                </select>
+              </div>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn w-100 mb-3 text-center" style="background-color: #f9bc06; color: #000;">
+              Create Account
+            </button>
+
+            <!-- Sign in Link -->
+            <div class="text-center">
+              <p class="text-muted small mb-0">
+                Already have an account?
+                <a href="#" class="text-muted ms-1" data-bs-toggle="modal" data-bs-target="#signinModal">
+                  Sign in
+                </a>
+              </p>
+            </div>
+
+          </form>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
   
     <!-- Required Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

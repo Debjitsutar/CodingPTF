@@ -179,10 +179,6 @@
 
     setInterval(updateDateTime, 100); // Update every minute
     updateDateTime(); // Initial call
-
-
-    
-
   </script>
 
   <!-- Favicon -->
@@ -952,175 +948,174 @@
     .apexcharts-rangebar-goals-markers {
       pointer-events: none
     }
-
-    
   </style>
 
-   <!-- for the week bar -->
-   <style>
+  <!-- for the week bar -->
+  <style>
     /* General Page Styling */
     body {
-        background-color: #121212f3;
-        color: white;
-        font-family: Arial, sans-serif;
-        text-align: center;
+      background-color: #121212f3;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
     }
 
     /* Chart Container */
     .chart-container {
-        width: 80%;
-        max-width: 700px;
-        height: 350px;
-        margin: 1px auto;
-        position: relative;
-        padding-bottom: 20px;
+      width: 80%;
+      max-width: 700px;
+      height: 350px;
+      margin: 1px auto;
+      position: relative;
+      padding-bottom: 20px;
     }
 
     /* Animated Axes */
     .chart-container::before,
     .chart-container::after {
-        content: "";
-        position: absolute;
-        background-color: rgba(255, 255, 255, 0);
-        transition: width 1s ease-in-out, height 1s ease-in-out;
+      content: "";
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0);
+      transition: width 1s ease-in-out, height 1s ease-in-out;
 
     }
 
     /* Left Axis (Y-Axis) */
     .chart-container::before {
-        width: 2px;
-        height: 0%;
-        left: 0;
-        bottom: 0;
-        animation: drawY 2s ease-in-out forwards;
+      width: 2px;
+      height: 0%;
+      left: 0;
+      bottom: 0;
+      animation: drawY 2s ease-in-out forwards;
 
     }
 
     /* Bottom Axis (X-Axis) */
     .chart-container::after {
-        width: 0%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        animation: drawX 2.5s ease-in-out forwards;
+      width: 0%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      animation: drawX 2.5s ease-in-out forwards;
     }
 
     /* Bars */
     .chart {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-around;
-        height: 100%;
-        position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      height: 100%;
+      position: relative;
     }
 
     /* Individual Bar Containers */
     .bar-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 90px;
-        position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90px;
+      position: relative;
     }
 
     /* Bars Group */
     .bar-group {
-        display: flex;
-        align-items: flex-end;
-        gap: 8px;
+      display: flex;
+      align-items: flex-end;
+      gap: 8px;
     }
 
     /* Bars */
     .bar {
-        width: 30px;
-        border-radius: 5px;
-        opacity: 0;
-        animation: fadeInUp 1s ease-in forwards;
+      width: 30px;
+      border-radius: 5px;
+      opacity: 0;
+      animation: fadeInUp 1s ease-in forwards;
     }
 
     /* Labels */
     .label {
-        margin-top: 10px;
-        font-size: 14px;
-        opacity: 0;
-        animation: fadeIn 1s ease-in forwards;
+      margin-top: 10px;
+      font-size: 14px;
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
     }
 
     /* Value Labels */
     .value-label {
-        margin-bottom: 27px;
-        margin-left: 2px;
-        position: absolute;
-        font-size: 14px;
-        font-weight: bold;
-        opacity: 0;
-        animation: fadeIn 1s ease-in forwards;
-        white-space: nowrap;
+      margin-bottom: 27px;
+      margin-left: 2px;
+      position: absolute;
+      font-size: 14px;
+      font-weight: bold;
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+      white-space: nowrap;
     }
 
     .current-value {
-        transform: translateX(-50%);
+      transform: translateX(-50%);
     }
 
     .previous-value {
-        transform: translateX(-50%);
+      transform: translateX(-50%);
     }
 
 
 
     /* Animations */
     @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
+      from {
+        opacity: 0;
+      }
 
-        to {
-            opacity: 1;
-        }
+      to {
+        opacity: 1;
+      }
     }
 
     @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
 
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Line Draw Animations */
     @keyframes drawY {
-        from {
-            height: 0%;
-        }
+      from {
+        height: 0%;
+      }
 
-        to {
-            height: 100%;
-        }
+      to {
+        height: 100%;
+      }
     }
 
     @keyframes drawX {
-        from {
-            width: 0%;
-        }
+      from {
+        width: 0%;
+      }
 
-        to {
-            width: 100%;
-        }
+      to {
+        width: 100%;
+      }
     }
 
     @media (max-width: 600px) {
-        .bar-container {
-            width: 100%;
-        }
+      .bar-container {
+        width: 100%;
+      }
 
-        .bar {
-            width: 20px;
-        }
-        .value-label {
+      .bar {
+        width: 20px;
+      }
+
+      .value-label {
         margin-bottom: 30px;
         margin-left: 2px;
         position: absolute;
@@ -1129,135 +1124,143 @@
         opacity: 0;
         animation: fadeIn 1s ease-in forwards;
         white-space: nowrap;
+      }
     }
-    }
-</style>
+  </style>
 
 </head>
 
 <body data-new-gr-c-s-check-loaded="14.1217.0" data-gr-ext-installed="">
 
   <!-- Sign-IN Modal -->
-   <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="signinModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header border-bottom-0">
-                    
-                </div>
-                <div class="modal-body p-4 pt-0">
-                    <h1 class="h4 mb-4 text-center">Sign in</h1>
-                    <br>
-                    <form>
-                        <div class="mb-3">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control" placeholder="you@example.com">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Password</label>
-                            <input type="password" class="form-control" placeholder="••••••••">
-                        </div>
-                        <hr class="my-4">
-                        <button type="submit" class="btn w-100 mb-3" style="background-color: #f9bc06; color: #000;">Sign In</button>
-                         <div class="text-center">  <!-- Changed from text-center -->
-                        <span class="text-muted small">Don't have an account?</span>
-                        <a href="#" class="d-block text-muted small mt-2" data-bs-toggle="modal" data-bs-target="#signupModal">
-                            Sign up
-                        </a>
-                    </div>
-                    </form>
-                </div>
-            </div>
+  <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="signinModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-bottom-0">
+
         </div>
+        <div class="modal-body p-4 pt-0">
+          <h1 class="h4 mb-4 text-center">Sign in</h1>
+          <br>
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" placeholder="you@example.com">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" placeholder="••••••••">
+            </div>
+            <hr class="my-4">
+            <button type="submit" class="btn w-100 mb-3" style="background-color: #f9bc06; color: #000;">Sign
+              In</button>
+            <div class="text-center">
+              <p class="text-muted small mb-0">
+                Don't have an account?
+                <a href="#" class="text-muted ms-1" data-bs-toggle="modal" data-bs-target="#signupModal">
+                  Sign up
+                </a>
+              </p>
+            </div>
+
+          </form>
+        </div>
+      </div>
     </div>
+  </div>
 
   <!-- Sign Up Modal -->
-<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-bottom-0">
-                
-            </div>
-            <div class="modal-body p-4 pt-0 text-start">  <!-- Added text-start here -->
-                <h1 class="h4 mb-4">Sign up</h1>  <!-- Removed text-center -->
-                <form>
-                    <!-- Name Row -->
-                    <div class="row mb-3 text-start">
-                        <div class="col-md-4">
-                            <label class="form-label d-block text-start">First Name</label>
-                            <input type="text" class="form-control" placeholder="First" required>
-                        </div>
-                        <div class="col-md-4">
-                            <label class="form-label d-block text-start">Middle Name</label>
-                            <input type="text" class="form-control" placeholder="Middle (optional)">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="form-label d-block text-start">Last Name</label>
-                            <input type="text" class="form-control" placeholder="Last" required>
-                        </div>
-                    </div>
-                    
-                    <!-- Email -->
-                    <div class="mb-3 text-start">
-                        <label class="form-label d-block text-start">Email</label>
-                        <input type="email" class="form-control" placeholder="you@example.com" required>
-                    </div>
-                    
-                    <!-- Passwords -->
-                    <div class="row mb-3 text-start">
-                        <div class="col-md-6">
-                            <label class="form-label d-block text-start">Password</label>
-                            <input type="password" class="form-control" placeholder="••••••••" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label d-block text-start">Confirm Password</label>
-                            <input type="password" class="form-control" placeholder="••••••••" required>
-                        </div>
-                    </div>
-                    
-                    <!-- College Info -->
-                    <div class="mb-3 text-start">
-                        <label class="form-label d-block text-start">College/University Name</label>
-                        <input type="text" class="form-control" placeholder="Your college name" required>
-                    </div>
-                    
-                    <!-- Branch and Year -->
-                    <div class="row mb-3 text-start">
-                        <div class="col-md-6">
-                            <label class="form-label d-block text-start">Branch/Department</label>
-                            <input type="text" class="form-control" placeholder="e.g. Computer Science" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label d-block text-start">Passing Year</label>
-                            <select class="form-select">
-                                <option value="" disabled selected>Select year</option>
-                                <option>2023</option>
-                                <option>2024</option>
-                                <option>2025</option>
-                                <option>2026</option>
-                                <option>2027</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <hr class="my-4">
-                    
-                    <!-- Submit Button -->
-                    <button type="submit" class="btn w-100 mb-3 text-center" style="background-color: #f9bc06; color: #000;">
-                        Create Account
-                    </button>
-                    
-                    <!-- Sign in Link -->
-                    <div class="text-center">  <!-- Changed from text-center -->
-                        <span class="text-muted small">Already have an account?</span>
-                        <a href="#" class="d-block text-muted small mt-2" data-bs-toggle="modal" data-bs-target="#signinModal">
-                            Sign in
-                        </a>
-                    </div>
-                </form>
-            </div>
+      <div class="modal-content">
+        <div class="modal-header border-bottom-0">
+
         </div>
+        <div class="modal-body p-4 pt-0 text-start">
+          <!-- Added text-start here -->
+          <h1 class="h4 mb-4">Sign up</h1> <!-- Removed text-center -->
+          <form>
+            <!-- Name Row -->
+            <div class="row mb-3 text-start">
+              <div class="col-md-4">
+                <label class="form-label d-block text-start">First Name</label>
+                <input type="text" class="form-control" placeholder="First" required>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label d-block text-start">Middle Name</label>
+                <input type="text" class="form-control" placeholder="Middle (optional)">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label d-block text-start">Last Name</label>
+                <input type="text" class="form-control" placeholder="Last" required>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3 text-start">
+              <label class="form-label d-block text-start">Email</label>
+              <input type="email" class="form-control" placeholder="you@example.com" required>
+            </div>
+
+            <!-- Passwords -->
+            <div class="row mb-3 text-start">
+              <div class="col-md-6">
+                <label class="form-label d-block text-start">Password</label>
+                <input type="password" class="form-control" placeholder="••••••••" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label d-block text-start">Confirm Password</label>
+                <input type="password" class="form-control" placeholder="••••••••" required>
+              </div>
+            </div>
+
+            <!-- College Info -->
+            <div class="mb-3 text-start">
+              <label class="form-label d-block text-start">College/University Name</label>
+              <input type="text" class="form-control" placeholder="Your college name" required>
+            </div>
+
+            <!-- Branch and Year -->
+            <div class="row mb-3 text-start">
+              <div class="col-md-6">
+                <label class="form-label d-block text-start">Branch/Department</label>
+                <input type="text" class="form-control" placeholder="e.g. Computer Science" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label d-block text-start">Passing Year</label>
+                <select class="form-select">
+                  <option value="" disabled selected>Select year</option>
+                  <option>2023</option>
+                  <option>2024</option>
+                  <option>2025</option>
+                  <option>2026</option>
+                  <option>2027</option>
+                </select>
+              </div>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn w-100 mb-3 text-center" style="background-color: #f9bc06; color: #000;">
+              Create Account
+            </button>
+
+            <!-- Sign in Link -->
+            <div class="text-center">
+              <p class="text-muted small mb-0">
+                Already have an account?
+                <a href="#" class="text-muted ms-1" data-bs-toggle="modal" data-bs-target="#signinModal">
+                  Sign in
+                </a>
+              </p>
+            </div>
+
+          </form>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
   <!-- Required Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Sidenav -->
@@ -1286,31 +1289,39 @@
             <div class="dropdown-menu top-auto bottom-0 ms-xl-3">
               <!-- Color mode -->
               <h6 class="dropdown-header">Color mode</h6>
-              <a class="dropdown-item d-flex" data-bs-theme-value="light" href="#" role="button" aria-pressed="false"> <span class="material-symbols-outlined me-2">light_mode</span> Light </a>
-              <a class="dropdown-item d-flex active" data-bs-theme-value="dark" href="#" role="button" aria-pressed="true"> <span class="material-symbols-outlined me-2">dark_mode</span> Dark </a>
-              <a class="dropdown-item d-flex" data-bs-theme-value="auto" href="#" role="button" aria-pressed="false"> <span class="material-symbols-outlined me-2">contrast</span> Auto </a>
-            
+              <a class="dropdown-item d-flex" data-bs-theme-value="light" href="#" role="button" aria-pressed="false">
+                <span class="material-symbols-outlined me-2">light_mode</span> Light </a>
+              <a class="dropdown-item d-flex active" data-bs-theme-value="dark" href="#" role="button"
+                aria-pressed="true"> <span class="material-symbols-outlined me-2">dark_mode</span> Dark </a>
+              <a class="dropdown-item d-flex" data-bs-theme-value="auto" href="#" role="button" aria-pressed="false">
+                <span class="material-symbols-outlined me-2">contrast</span> Auto </a>
+
               <!-- Navigation position -->
               <hr class="dropdown-divider">
               <h6 class="dropdown-header">Navigation position</h6>
-              <a class="dropdown-item d-flex active" data-bs-navigation-position-value="sidenav" href="#" role="button" aria-pressed="true">
+              <a class="dropdown-item d-flex active" data-bs-navigation-position-value="sidenav" href="#" role="button"
+                aria-pressed="true">
                 <span class="material-symbols-outlined me-2">keyboard_tab_rtl</span> Sidenav
               </a>
-              <a class="dropdown-item d-flex" data-bs-navigation-position-value="topnav" href="#" role="button" aria-pressed="false">
+              <a class="dropdown-item d-flex" data-bs-navigation-position-value="topnav" href="#" role="button"
+                aria-pressed="false">
                 <span class="material-symbols-outlined me-2">vertical_align_top</span> Topnav
               </a>
-            
+
               <!-- Sidenav sizing -->
               <div class="sidenav-sizing">
                 <hr class="dropdown-divider">
                 <h6 class="dropdown-header">Sidenav sizing</h6>
-                <a class="dropdown-item d-flex active" data-bs-sidenav-sizing-value="base" href="#" role="button" aria-pressed="true">
+                <a class="dropdown-item d-flex active" data-bs-sidenav-sizing-value="base" href="#" role="button"
+                  aria-pressed="true">
                   <span class="material-symbols-outlined me-2">density_large</span> Base
                 </a>
-                <a class="dropdown-item d-flex" data-bs-sidenav-sizing-value="md" href="#" role="button" aria-pressed="false">
+                <a class="dropdown-item d-flex" data-bs-sidenav-sizing-value="md" href="#" role="button"
+                  aria-pressed="false">
                   <span class="material-symbols-outlined me-2">density_medium</span> Medium
                 </a>
-                <a class="dropdown-item d-flex" data-bs-sidenav-sizing-value="sm" href="#" role="button" aria-pressed="false">
+                <a class="dropdown-item d-flex" data-bs-sidenav-sizing-value="sm" href="#" role="button"
+                  aria-pressed="false">
                   <span class="material-symbols-outlined me-2">density_small</span> Small
                 </a>
               </div>
@@ -1320,290 +1331,291 @@
       </div>
     </nav>
   </aside>
-  
- <!-- Sidenav (lg) -->
-<aside class="aside" id="sidenav-lg">
-  <nav class="navbar navbar-expand-xl navbar-vertical">
-    <div class="container-lg">
-      <!-- Brand -->
-      <a class="navbar-brand" href="./index.html">
-        <img src="classroom.png" alt="Classroom Logo"
-          style="width: 221px; height: auto; margin-left: 1vw; margin-top: -2vh;">
-      </a>
+
+  <!-- Sidenav (lg) -->
+  <aside class="aside" id="sidenav-lg">
+    <nav class="navbar navbar-expand-xl navbar-vertical">
+      <div class="container-lg">
+        <!-- Brand -->
+        <a class="navbar-brand" href="./index.html">
+          <img src="classroom.png" alt="Classroom Logo"
+            style="width: 221px; height: auto; margin-left: 1vw; margin-top: -2vh;">
+        </a>
 
 
 
-      <!-- User -->
-      <div class="ms-auto d-xl-none">
-        <div class="dropdown my-n2">
-          <a class="btn btn-link d-inline-flex align-items-center dropdown-toggle" href="#" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="avatar avatar-sm avatar-status avatar-status-success me-3">
-              <img class="avatar-img" src="https://yevgenysim-turkey.github.io/dashbrd/assets/img/photos/photo-6.jpg"
-                alt="...">
+        <!-- User -->
+        <div class="ms-auto d-xl-none">
+          <div class="dropdown my-n2">
+            <a class="btn btn-link d-inline-flex align-items-center dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="avatar avatar-sm avatar-status avatar-status-success me-3">
+                <img class="avatar-img" src="https://yevgenysim-turkey.github.io/dashbrd/assets/img/photos/photo-6.jpg"
+                  alt="...">
+              </span>
+              John Williams
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Account</a></li>
+              <li><a class="dropdown-item" href="#">Change password</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse"
+          data-bs-target="#sidenavLargeCollapse" aria-controls="sidenavLargeCollapse" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="sidenavLargeCollapse">
+          <!-- Search -->
+          <div class="input-group d-xl-none my-4 my-xl-0">
+            <input class="form-control" id="topnavSearchInputMobile" type="search" placeholder="Search"
+              aria-label="Search" aria-describedby="navbarSearchMobile">
+            <span class="input-group-text" id="navbarSearchMobile">
+              <span class="material-symbols-outlined"> search </span>
             </span>
-            John Williams
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="#">Account</a></li>
-            <li><a class="dropdown-item" href="#">Change password</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
-          </ul>
+          </div>
+
+          <!-- Nav -->
+          <nav class="navbar-nav nav-pills mb-7">
+            <div class="nav-item">
+              <a class="nav-link active" href="index.html" role="button">
+                <span class="material-symbols-outlined me-3">space_dashboard</span> Dashboards
+              </a>
+            </div>
+
+            <div class="nav-item">
+              <a class="nav-link " href="leaderboard.html" role="button">
+                <span class="material-symbols-outlined me-3">space_dashboard</span> Leaderboard
+              </a>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#projects" role="button"
+                aria-expanded="false" aria-controls="projects">
+                <span class="material-symbols-outlined me-3">list_alt</span> Arrays
+              </a>
+              <div class="collapse" id="projects">
+                <nav class="nav nav-pills flex-column align-items-start">
+                  <a class="nav-link" href="projects.html">Easy</a>
+                  <a class="nav-link" href="project.html">Medium</a>
+                  <a class="nav-link" href="project-new.html">Hard</a>
+                </nav>
+              </div>
+            </div>
+
+
+            <div class="nav-item">
+              <a class="nav-link " href="#" data-bs-toggle="collapse" data-bs-target="#strings" role="button"
+                aria-expanded="false" aria-controls="strings">
+                <span class="material-symbols-outlined">text_fields</span>&nbsp;
+                Strings
+              </a>
+              <div class="collapse " id="strings">
+                <nav class="nav nav-pills flex-column align-items-start">
+                  <a class="nav-link " href="string1.html">Easy</a>
+                  <a class="nav-link " href="string2.html">Medium</a>
+                  <a class="nav-link " href="string3.html">Hard</a>
+                </nav>
+              </div>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link " href="#" data-bs-toggle="collapse" data-bs-target="#linkedlist" role="button"
+                aria-expanded="false" aria-controls="linkedlist">
+                <span class="material-symbols-outlined">merge_type</span>&nbsp; Linked List
+              </a>
+              <div class="collapse " id="linkedlist">
+                <nav class="nav nav-pills flex-column align-items-start">
+                  <a class="nav-link " href="ll1.html">Easy</a>
+                  <a class="nav-link " href="ll2.html">Medium</a>
+                  <a class="nav-link " href="ll3.html">Hard</a>
+                </nav>
+              </div>
+            </div>
+
+            <div class="nav-item">
+              <a class="nav-link " href="#" data-bs-toggle="collapse" data-bs-target="#trees" role="button"
+                aria-expanded="false" aria-controls="trees">
+                <span class="material-symbols-outlined">share</span>&nbsp; Trees
+              </a>
+              <div class="collapse " id="trees">
+                <nav class="nav nav-pills flex-column align-items-start">
+                  <a class="nav-link " href="trees1.html">Easy</a>
+                  <a class="nav-link " href="trees2.html">Medium</a>
+                  <a class="nav-link " href="trees3.html">Hard</a>
+                </nav>
+              </div>
+            </div>
+
+            <div class="nav-item">
+              <a class="nav-link " href="#" data-bs-toggle="collapse" data-bs-target="#graphs" role="button"
+                aria-expanded="false" aria-controls="graphs">
+                <span class="material-symbols-outlined">account_tree</span>&nbsp; Graphs
+              </a>
+              <div class="collapse " id="graphs">
+                <nav class="nav nav-pills flex-column align-items-start">
+                  <a class="nav-link " href="graph1.html">Easy</a>
+                  <a class="nav-link " href="graph2.html">Medium</a>
+                  <a class="nav-link " href="graph3.html">Hard</a>
+                </nav>
+              </div>
+            </div>
+
+            <div class="nav-item">
+              <a class="nav-link " href="#" data-bs-toggle="collapse" data-bs-target="#dps" role="button"
+                aria-expanded="false" aria-controls="projects">
+                <span class="material-symbols-outlined">grid_on</span>&nbsp; Dynamic Programming
+
+              </a>
+              <div class="collapse " id="dps">
+                <nav class="nav nav-pills flex-column align-items-start">
+                  <a class="nav-link " href="DP1.html">Easy</a>
+                  <a class="nav-link " href="DP2.html">Medium</a>
+                  <a class="nav-link " href="DP3.html">Hard</a>
+                </nav>
+              </div>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link " href="#" data-bs-toggle="collapse" data-bs-target="#practice" role="button"
+                aria-expanded="false" aria-controls="projects">
+                <span class="material-symbols-outlined">draw</span>&nbsp; General Practice
+
+              </a>
+              <div class="collapse " id="practice">
+                <nav class="nav nav-pills flex-column align-items-start">
+                  <a class="nav-link " href="coding.html">Coding</a>
+                  <a class="nav-link " href="post.html">Posts</a>
+
+                </nav>
+              </div>
+            </div>
+
+
+
+            <div class="nav-item">
+              <a class="nav-link " href="#" data-bs-toggle="collapse" data-bs-target="#account" role="button"
+                aria-expanded="false" aria-controls="account">
+                <span class="material-symbols-outlined me-3">person</span> Account
+              </a>
+              <div class="collapse " id="account">
+                <nav class="nav nav-pills flex-column align-items-start">
+                  <a class="nav-link " href="account.html">Account overview</a>
+
+                </nav>
+              </div>
+            </div>
+
+            <div class="nav-item">
+              <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#mdoals" role="button"
+                aria-expanded="false" aria-controls="mdoals">
+                <span class="material-symbols-outlined me-3">login</span> Authentication
+              </a>
+              <div class="collapse" id="mdoals">
+                <nav class="nav nav-pills flex-column align-items-start">
+                  <!-- Corrected Modal Trigger -->
+                  <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">Sign In</a>
+                  <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
+
+                </nav>
+              </div>
+            </div>
+          </nav>
+
+
+
+
+          <!-- Heading -->
+          <h3 class="fs-base px-3 mb-4 text-start">About Us</h3>
+
+          <!-- Nav -->
+          <nav class="navbar-nav nav-pills mb-xl-7 flex-column align-items-start">
+            <div class="nav-item">
+              <a class="nav-link " href="faqs.html" target="_blank">
+                <span class="material-symbols-outlined me-3">sticky_note_2</span>Common FAQs</a>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link " href="contactus.html" target="_blank">
+                <span class="material-symbols-outlined">support_agent</span>&nbsp; &nbsp;Contact Us</a>
+            </div>
+          </nav>
+
+          <!-- Divider -->
+          <hr class="my-4 d-xl-none">
+
+          <!-- Nav -->
+          <nav class="navbar-nav nav-pills d-xl-none mb-7">
+            <div class="nav-item dropdown">
+              <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" data-bs-settings-switcher=""
+                aria-expanded="false">
+                <span class="material-symbols-outlined"> settings </span> <span class="d-xl-none ms-3">Settings</span>
+              </a>
+              <div class="dropdown-menu">
+                <!-- Color mode -->
+                <h6 class="dropdown-header">Color mode</h6>
+                <a class="dropdown-item d-flex" data-bs-theme-value="light" href="#" role="button" aria-pressed="false">
+                  <span class="material-symbols-outlined me-2"> light_mode </span> Light
+                </a>
+                <a class="dropdown-item d-flex active" data-bs-theme-value="dark" href="#" role="button"
+                  aria-pressed="true"> <span class="material-symbols-outlined me-2"> dark_mode
+                  </span> Dark </a>
+                <a class="dropdown-item d-flex" data-bs-theme-value="auto" href="#" role="button" aria-pressed="false">
+                  <span class="material-symbols-outlined me-2"> contrast </span>
+                  Auto </a>
+
+                <!-- Divider -->
+                <hr class="dropdown-divider">
+
+                <!-- Navigation position -->
+                <h6 class="dropdown-header">Navigation position</h6>
+                <a class="dropdown-item d-flex" data-bs-navigation-position-value="sidenav" href="#" role="button"
+                  aria-pressed="false">
+                  <span class="material-symbols-outlined me-2"> thumbnail_bar </span> Sidenav
+                </a>
+                <a class="dropdown-item d-flex active" data-bs-navigation-position-value="topnav" href="#" role="button"
+                  aria-pressed="true">
+                  <span class="material-symbols-outlined me-2"> toolbar </span> Topnav
+                </a>
+              </div>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link" href="https://themes.getbootstrap.com/product/dashbrd/" target="_blank">
+                <span class="material-symbols-outlined me-3">local_mall</span> Go to product page
+              </a>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link" href="mailto:yevgenysim+simpleqode@gmail.com">
+                <span class="material-symbols-outlined me-3">alternate_email</span> Contact us
+              </a>
+            </div>
+          </nav>
+
+          <!-- Card -->
+          <div class="card mt-auto">
+            <div class="card-body text-start">
+              <!-- Added text-start -->
+              <!-- Heading -->
+              <h6>Need help?</h6>
+
+              <!-- Text -->
+              <p class="text-body-secondary mb-0">
+                Feel free to reach out to us via the 'Contact Us' option, or click
+                <a href="contactus.html" target="_blank">here</a>.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
-
-      <!-- Toggler -->
-      <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse"
-        data-bs-target="#sidenavLargeCollapse" aria-controls="sidenavLargeCollapse" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Collapse -->
-      <div class="collapse navbar-collapse" id="sidenavLargeCollapse">
-        <!-- Search -->
-        <div class="input-group d-xl-none my-4 my-xl-0">
-          <input class="form-control" id="topnavSearchInputMobile" type="search" placeholder="Search"
-            aria-label="Search" aria-describedby="navbarSearchMobile">
-          <span class="input-group-text" id="navbarSearchMobile">
-            <span class="material-symbols-outlined"> search </span>
-          </span>
-        </div>
-
-        <!-- Nav -->
-        <nav class="navbar-nav nav-pills mb-7">
-          <div class="nav-item">
-            <a class="nav-link active" href="index.html" role="button">
-              <span class="material-symbols-outlined me-3">space_dashboard</span> Dashboards
-            </a>
-          </div>
-
-          <div class="nav-item">
-            <a class="nav-link " href="leaderboard.html" role="button">
-              <span class="material-symbols-outlined me-3">space_dashboard</span> Leaderboard
-            </a>
-          </div>
-          <div class="nav-item">
-  <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#projects" role="button"
-     aria-expanded="false" aria-controls="projects">
-    <span class="material-symbols-outlined me-3">list_alt</span> Arrays
-  </a>
-  <div class="collapse" id="projects">
-    <nav class="nav nav-pills flex-column align-items-start">
-      <a class="nav-link" href="projects.html">Easy</a>
-      <a class="nav-link" href="project.html">Medium</a>
-      <a class="nav-link" href="project-new.html">Hard</a>
+      </div>
     </nav>
-  </div>
-</div>
-
-
-          <div class="nav-item">
-            <a class="nav-link " href="#" data-bs-toggle="collapse" data-bs-target="#strings" role="button"
-              aria-expanded="false" aria-controls="strings">
-              <span class="material-symbols-outlined">text_fields</span>&nbsp;
-              Strings
-            </a>
-            <div class="collapse " id="strings">
-              <nav class="nav nav-pills flex-column align-items-start">
-                <a class="nav-link " href="string1.html">Easy</a>
-                <a class="nav-link " href="string2.html">Medium</a>
-                <a class="nav-link " href="string3.html">Hard</a>
-              </nav>
-            </div>
-          </div>
-          <div class="nav-item">
-            <a class="nav-link " href="#" data-bs-toggle="collapse" data-bs-target="#linkedlist" role="button"
-              aria-expanded="false" aria-controls="linkedlist">
-              <span class="material-symbols-outlined">merge_type</span>&nbsp; Linked List
-            </a>
-            <div class="collapse " id="linkedlist">
-              <nav class="nav nav-pills flex-column align-items-start">
-                <a class="nav-link " href="ll1.html">Easy</a>
-                <a class="nav-link " href="ll2.html">Medium</a>
-                <a class="nav-link " href="ll3.html">Hard</a>
-              </nav>
-            </div>
-          </div>
-
-          <div class="nav-item">
-            <a class="nav-link " href="#" data-bs-toggle="collapse" data-bs-target="#trees" role="button"
-              aria-expanded="false" aria-controls="trees">
-              <span class="material-symbols-outlined">share</span>&nbsp; Trees
-            </a>
-            <div class="collapse " id="trees">
-              <nav class="nav nav-pills flex-column align-items-start">
-                <a class="nav-link " href="trees1.html">Easy</a>
-                <a class="nav-link " href="trees2.html">Medium</a>
-                <a class="nav-link " href="trees3.html">Hard</a>
-              </nav>
-            </div>
-          </div>
-
-          <div class="nav-item">
-            <a class="nav-link " href="#" data-bs-toggle="collapse" data-bs-target="#graphs" role="button"
-              aria-expanded="false" aria-controls="graphs">
-              <span class="material-symbols-outlined">account_tree</span>&nbsp; Graphs
-            </a>
-            <div class="collapse " id="graphs">
-              <nav class="nav nav-pills flex-column align-items-start">
-                <a class="nav-link " href="graph1.html">Easy</a>
-                <a class="nav-link " href="graph2.html">Medium</a>
-                <a class="nav-link " href="graph3.html">Hard</a>
-              </nav>
-            </div>
-          </div>
-
-          <div class="nav-item">
-            <a class="nav-link " href="#" data-bs-toggle="collapse" data-bs-target="#dps" role="button"
-              aria-expanded="false" aria-controls="projects">
-              <span class="material-symbols-outlined">grid_on</span>&nbsp; Dynamic Programming
-
-            </a>
-            <div class="collapse " id="dps">
-              <nav class="nav nav-pills flex-column align-items-start">
-                <a class="nav-link " href="DP1.html">Easy</a>
-                <a class="nav-link " href="DP2.html">Medium</a>
-                <a class="nav-link " href="DP3.html">Hard</a>
-              </nav>
-            </div>
-          </div>
-          <div class="nav-item">
-            <a class="nav-link " href="#" data-bs-toggle="collapse" data-bs-target="#practice" role="button"
-              aria-expanded="false" aria-controls="projects">
-              <span class="material-symbols-outlined">draw</span>&nbsp; General Practice
-
-            </a>
-            <div class="collapse " id="practice">
-              <nav class="nav nav-pills flex-column align-items-start">
-                <a class="nav-link " href="coding.html">Coding</a>
-                <a class="nav-link " href="post.html">Posts</a>
-
-              </nav>
-            </div>
-          </div>
-
-          
-
-          <div class="nav-item">
-            <a class="nav-link " href="#" data-bs-toggle="collapse" data-bs-target="#account" role="button"
-              aria-expanded="false" aria-controls="account">
-              <span class="material-symbols-outlined me-3">person</span> Account
-            </a>
-            <div class="collapse " id="account">
-              <nav class="nav nav-pills flex-column align-items-start">
-                <a class="nav-link " href="account.html">Account overview</a>
-                
-              </nav>
-            </div>
-          </div>
-
-          <div class="nav-item">
-            <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#mdoals" role="button"
-              aria-expanded="false" aria-controls="mdoals">
-              <span class="material-symbols-outlined me-3">login</span> Authentication
-            </a>
-            <div class="collapse" id="mdoals">
-              <nav class="nav nav-pills flex-column align-items-start">
-                <!-- Corrected Modal Trigger -->
-                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">Sign In</a>
-                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
-
-              </nav>
-            </div>
-          </div>
-        </nav>
-
-
-
-
-        <!-- Heading -->
-        <h3 class="fs-base px-3 mb-4 text-start">About Us</h3>
-
-        <!-- Nav -->
-        <nav class="navbar-nav nav-pills mb-xl-7 flex-column align-items-start">
-          <div class="nav-item">
-            <a class="nav-link " href="faqs.html" target="_blank">
-              <span class="material-symbols-outlined me-3">sticky_note_2</span>Common FAQs</a>
-          </div>
-          <div class="nav-item">
-            <a class="nav-link " href="contactus.html" target="_blank">
-              <span class="material-symbols-outlined">support_agent</span>&nbsp; &nbsp;Contact Us</a>
-          </div>
-        </nav>
-
-        <!-- Divider -->
-        <hr class="my-4 d-xl-none">
-
-        <!-- Nav -->
-        <nav class="navbar-nav nav-pills d-xl-none mb-7">
-          <div class="nav-item dropdown">
-            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" data-bs-settings-switcher=""
-              aria-expanded="false">
-              <span class="material-symbols-outlined"> settings </span> <span class="d-xl-none ms-3">Settings</span>
-            </a>
-            <div class="dropdown-menu">
-              <!-- Color mode -->
-              <h6 class="dropdown-header">Color mode</h6>
-              <a class="dropdown-item d-flex" data-bs-theme-value="light" href="#" role="button" aria-pressed="false">
-                <span class="material-symbols-outlined me-2"> light_mode </span> Light
-              </a>
-              <a class="dropdown-item d-flex active" data-bs-theme-value="dark" href="#" role="button"
-                aria-pressed="true"> <span class="material-symbols-outlined me-2"> dark_mode
-                </span> Dark </a>
-              <a class="dropdown-item d-flex" data-bs-theme-value="auto" href="#" role="button" aria-pressed="false">
-                <span class="material-symbols-outlined me-2"> contrast </span>
-                Auto </a>
-
-              <!-- Divider -->
-              <hr class="dropdown-divider">
-
-              <!-- Navigation position -->
-              <h6 class="dropdown-header">Navigation position</h6>
-              <a class="dropdown-item d-flex" data-bs-navigation-position-value="sidenav" href="#" role="button"
-                aria-pressed="false">
-                <span class="material-symbols-outlined me-2"> thumbnail_bar </span> Sidenav
-              </a>
-              <a class="dropdown-item d-flex active" data-bs-navigation-position-value="topnav" href="#" role="button"
-                aria-pressed="true">
-                <span class="material-symbols-outlined me-2"> toolbar </span> Topnav
-              </a>
-            </div>
-          </div>
-          <div class="nav-item">
-            <a class="nav-link" href="https://themes.getbootstrap.com/product/dashbrd/" target="_blank">
-              <span class="material-symbols-outlined me-3">local_mall</span> Go to product page
-            </a>
-          </div>
-          <div class="nav-item">
-            <a class="nav-link" href="mailto:yevgenysim+simpleqode@gmail.com">
-              <span class="material-symbols-outlined me-3">alternate_email</span> Contact us
-            </a>
-          </div>
-        </nav>
-
-        <!-- Card -->
-      <div class="card mt-auto">
-  <div class="card-body text-start"> <!-- Added text-start -->
-    <!-- Heading -->
-    <h6>Need help?</h6>
-
-    <!-- Text -->
-    <p class="text-body-secondary mb-0">
-      Feel free to reach out to us via the 'Contact Us' option, or click
-      <a href="contactus.html" target="_blank">here</a>.
-    </p>
-  </div>
-</div>
-
-      </div>
-    </div>
-    </div>
-  </nav>
-</aside>
+  </aside>
   <!-- Topnav -->
   <!-- Topnav (lg) -->
   <nav class="navbar navbar-expand-xl" id="topnav-lg">
@@ -1673,7 +1685,7 @@
             <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <span class="material-symbols-outlined me-3">list_alt</span> Arrays
             </a>
-            <div class="dropdown-menu"  style="text-align: left;">
+            <div class="dropdown-menu" style="text-align: left;">
               <a class="dropdown-item " href="projects.html">Easy</a>
               <a class="dropdown-item " href="project.html">Medium</a>
               <a class="dropdown-item " href="project-new.html">Hard</a>
@@ -1836,7 +1848,7 @@
       <div class="row">
         <div class="col">
           <!-- Search -->
-         
+
         </div>
         <div class="col-auto">
           <!-- User -->
@@ -1865,174 +1877,213 @@
   <!-- Main -->
   <main class="main px-lg-6">
     <!-- Leaderboard Section -->
-<div class="row">
-  <!-- Heading -->
-  
-  <div class="row align-items-center">
-    <!-- Left Side: Greeting & Summary -->
-    <div class="col-12 col-md order-md-0 text-center text-md-start">
-      <h1>Hello! Satyaki</h1>
-      <p class="fs-lg text-body-secondary mb-0">Here's a summary of your account activity for this week.</p>
-    </div>
-  
-    <!-- Right Side: Time & Location -->
-    <div class="col-12 col-md-auto order-md-1 d-flex align-items-center justify-content-md-end mb-4 mb-md-0">
-      <div class="avatar text-info me-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fs-4 duo-icon duo-icon-world" data-duoicon="world">
-          <path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2Z" class="duoicon-secondary-layer" opacity=".3"></path>
-          <path fill="currentColor" d="M12 4a7.988 7.988 0 0 0-6.335 3.114l-.165.221V9.02c0 1.25.775 2.369 1.945 2.809l.178.06 1.29.395c1.373.42 2.71-.697 2.577-2.096l-.019-.145-.175-1.049a1 1 0 0 1 .656-1.108l.108-.03.612-.14a2.667 2.667 0 0 0 1.989-3.263A7.987 7.987 0 0 0 12 4Zm2 9.4-1.564 1.251a.5.5 0 0 0-.041.744l1.239 1.239c.24.24.415.538.508.864l.175.613c.147.521.52.948 1.017 1.163a8.026 8.026 0 0 0 2.533-1.835l-.234-1.877a2 2 0 0 0-1.09-1.54l-1.47-.736A1 1 0 0 0 14 13.4Z" class="duoicon-primary-layer"></path>
-        </svg>
+    <div class="row">
+      <!-- Heading -->
+
+      <div class="row align-items-center">
+        <!-- Left Side: Greeting & Summary -->
+        <div class="col-12 col-md order-md-0 text-center text-md-start">
+          <h1>Hello! Satyaki</h1>
+          <p class="fs-lg text-body-secondary mb-0">Here's a summary of your account activity for this week.</p>
+        </div>
+
+        <!-- Right Side: Time & Location -->
+        <div class="col-12 col-md-auto order-md-1 d-flex align-items-center justify-content-md-end mb-4 mb-md-0">
+          <div class="avatar text-info me-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              class="fs-4 duo-icon duo-icon-world" data-duoicon="world">
+              <path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2Z"
+                class="duoicon-secondary-layer" opacity=".3"></path>
+              <path fill="currentColor"
+                d="M12 4a7.988 7.988 0 0 0-6.335 3.114l-.165.221V9.02c0 1.25.775 2.369 1.945 2.809l.178.06 1.29.395c1.373.42 2.71-.697 2.577-2.096l-.019-.145-.175-1.049a1 1 0 0 1 .656-1.108l.108-.03.612-.14a2.667 2.667 0 0 0 1.989-3.263A7.987 7.987 0 0 0 12 4Zm2 9.4-1.564 1.251a.5.5 0 0 0-.041.744l1.239 1.239c.24.24.415.538.508.864l.175.613c.147.521.52.948 1.017 1.163a8.026 8.026 0 0 0 2.533-1.835l-.234-1.877a2 2 0 0 0-1.09-1.54l-1.47-.736A1 1 0 0 0 14 13.4Z"
+                class="duoicon-primary-layer"></path>
+            </svg>
+          </div>
+          <div id="location">Kolkata, IND</div>
+          <div id="datetime" class="ms-2">-<time id="current-time">8:00 PM</time></div>
+        </div>
       </div>
-      <div id="location">Kolkata, IND</div>
-      <div id="datetime" class="ms-2">-<time id="current-time">8:00 PM</time></div>
+
+      <!-- JavaScript to update time dynamically -->
+      <script>
+        function updateTime() {
+          const now = new Date();
+          const timeString = now.toLocaleTimeString('en-US', {
+            hour: '2-digit',
+            minute: '2-digit'
+          });
+          document.getElementById('current-time').textContent = timeString;
+        }
+        updateTime(); // Update immediately
+        setInterval(updateTime, 60000); // Update every minute
+      </script>
+
     </div>
-  </div>
-  
-  <!-- JavaScript to update time dynamically -->
-  <script>
-    function updateTime() {
-      const now = new Date();
-      const timeString = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
-      document.getElementById('current-time').textContent = timeString;
-    }
-    updateTime(); // Update immediately
-    setInterval(updateTime, 60000); // Update every minute
-  </script>
-   
-  </div>
 
-  <br> <br>
+    <br> <br>
 
-  <!-- Top Performers Section -->
-  <div class="col-12 mb-6">
+    <!-- Top Performers Section -->
+    <div class="col-12 mb-6">
       <div class="card">
-          <div class="card-header">
-              <h3 class="fs-6 mb-0 text-start">Top Performers of the Week</h3>
-          </div>
-          <div class="card-body p-0">
-              <div class="row g-0">
-                  <!-- Top Performer Box (Left) -->
-                  <div class="col-md-4 border-end">
-                      <div class="p-4 text-center bg-light bg-opacity-10">
-                          <div class="position-relative mb-3">
-                              <span class="badge bg-gold rounded-circle position-absolute top-0 start-50 translate-middle" style="width: 30px; height: 30px; line-height: 30px;">1</span>
-                              <img src="https://randomuser.me/api/portraits/men/32.jpg" class="avatar avatar-xxl rounded-circle border border-3 border-gold" alt="Top performer">
-                          </div>
-                          <h4 class="mb-2">Alex Chen</h4>
-                          <span class="badge bg-success bg-opacity-10 text-success mb-3">Weekly Champion</span>
-                          
-                          <!-- Performance Stats -->
-                          <div class="d-flex flex-column gap-2 mx-auto" style="max-width: 250px;">
-                              <div class="d-flex justify-content-between">
-                                  <span class="text-body-secondary">Solved:</span>
-                                  <span class="fw-bold">95 problems</span>
-                              </div>
-                              <div class="d-flex justify-content-between">
-                                  <span class="text-body-secondary">Accuracy:</span>
-                                  <span class="fw-bold">92% <small class="text-success">(+2.4%)</small></span>
-                              </div>
-                              <div class="d-flex justify-content-between">
-                                  <span class="text-body-secondary">Avg Time:</span>
-                                  <span class="fw-bold">12.4 min</span>
-                              </div>
-                              <div class="d-flex justify-content-between">
-                                  <span class="text-body-secondary">Streak:</span>
-                                  <span class="fw-bold">14 days <i class="fas fa-fire text-danger ms-1"></i></span>
-                              </div>
-                          </div>
-                          
-                          <div class="progress mt-3 mx-auto" style="height: 6px; width: 80%;">
-                              <div class="progress-bar bg-gold" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                      </div>
-                  </div>
-                  
-                  <!-- Other Performers Box (Right) -->
-                  <div class="col-md-8">
-                      <div class="p-4">
-                          <div class="row">
-                              <!-- 2nd Place -->
-                              <div class="col-md-3 col-6 mb-4">
-                                  <div class="position-relative text-center">
-                                      <span class="badge bg-silver rounded-circle position-absolute top-0 start-50 translate-middle" style="width: 30px; height: 30px; line-height: 30px;">2</span>
-                                      <img src="https://randomuser.me/api/portraits/women/44.jpg" class="avatar avatar-xl rounded-circle border border-3 border-silver mb-2" alt="Top performer">
-                                      <h5 class="mb-1">Priya Patel</h5>
-                                      <p class="text-body-secondary mb-1"><small>87 problems</small></p>
-                                      <div class="d-flex justify-content-center gap-2">
-                                          <span class="badge bg-success bg-opacity-10 text-success" style="font-size: 0.65rem;">89%</span>
-                                          <span class="badge bg-info bg-opacity-10 text-info" style="font-size: 0.65rem;">14.2m</span>
-                                      </div>
-                                  </div>
-                              </div>
-                              
-                              <!-- 3rd Place -->
-                              <div class="col-md-3 col-6 mb-4">
-                                  <div class="position-relative text-center">
-                                      <span class="badge bg-bronze rounded-circle position-absolute top-0 start-50 translate-middle" style="width: 30px; height: 30px; line-height: 30px;">3</span>
-                                      <img src="https://randomuser.me/api/portraits/men/75.jpg" class="avatar avatar-xl rounded-circle border border-3 border-bronze mb-2" alt="Top performer">
-                                      <h5 class="mb-1">James Wilson</h5>
-                                      <p class="text-body-secondary mb-1"><small>82 problems</small></p>
-                                      <div class="d-flex justify-content-center gap-2">
-                                          <span class="badge bg-success bg-opacity-10 text-success" style="font-size: 0.65rem;">86%</span>
-                                          <span class="badge bg-info bg-opacity-10 text-info" style="font-size: 0.65rem;">15.7m</span>
-                                      </div>
-                                  </div>
-                              </div>
-                              
-                              <!-- 4th Place -->
-                              <div class="col-md-3 col-6 mb-4">
-                                  <div class="position-relative text-center">
-                                      <span class="badge bg-primary rounded-circle position-absolute top-0 start-50 translate-middle" style="width: 30px; height: 30px; line-height: 30px;">4</span>
-                                      <img src="https://randomuser.me/api/portraits/women/68.jpg" class="avatar avatar-xl rounded-circle border border-3 border-primary mb-2" alt="Top performer">
-                                      <h5 class="mb-1">Maria Garcia</h5>
-                                      <p class="text-body-secondary mb-1"><small>78 problems</small></p>
-                                      <div class="d-flex justify-content-center gap-2">
-                                          <span class="badge bg-success bg-opacity-10 text-success" style="font-size: 0.65rem;">91%</span>
-                                          <span class="badge bg-info bg-opacity-10 text-info" style="font-size: 0.65rem;">13.8m</span>
-                                      </div>
-                                  </div>
-                              </div>
-                              
-                              <!-- 5th Place -->
-                              <div class="col-md-3 col-6 mb-4">
-                                  <div class="position-relative text-center">
-                                      <span class="badge bg-primary rounded-circle position-absolute top-0 start-50 translate-middle" style="width: 30px; height: 30px; line-height: 30px;">5</span>
-                                      <img src="https://randomuser.me/api/portraits/men/90.jpg" class="avatar avatar-xl rounded-circle border border-3 border-primary mb-2" alt="Top performer">
-                                      <h5 class="mb-1">David Kim</h5>
-                                      <p class="text-body-secondary mb-1"><small>75 problems</small></p>
-                                      <div class="d-flex justify-content-center gap-2">
-                                          <span class="badge bg-success bg-opacity-10 text-success" style="font-size: 0.65rem;">84%</span>
-                                          <span class="badge bg-info bg-opacity-10 text-info" style="font-size: 0.65rem;">16.5m</span>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          
-                          <!-- View All Button -->
-                          <div class="text-center mt-2">
-                              <a href="leaderboard.html" class="btn btn-outline-primary btn-sm">View Full Leaderboard <i class="fas fa-chevron-right ms-1"></i></a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
+        <div class="card-header">
+          <h3 class="fs-6 mb-0 text-start">Top Performers of the Week</h3>
+        </div>
+        <div class="card-body p-0">
+          <div class="row g-0">
+            <!-- Top Performer Box (Left) -->
+            <div class="col-md-4 border-end">
+              <div class="p-4 text-center bg-light bg-opacity-10">
+                <div class="position-relative mb-3">
+                  <span class="badge bg-gold rounded-circle position-absolute top-0 start-50 translate-middle"
+                    style="width: 30px; height: 30px; line-height: 30px;">1</span>
+                  <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                    class="avatar avatar-xxl rounded-circle border border-3 border-gold" alt="Top performer">
+                </div>
+                <h4 class="mb-2">Alex Chen</h4>
+                <span class="badge bg-success bg-opacity-10 text-success mb-3">Weekly Champion</span>
 
-<style>
-  /* Custom colors for podium positions */
-  .bg-gold { background-color: #FFD700 !important; color: #000 !important; }
-  .bg-silver { background-color: #C0C0C0 !important; color: #000 !important; }
-  .bg-bronze { background-color: #CD7F32 !important; color: #000 !important; }
-  .border-gold { border-color: #FFD700 !important; }
-  .border-silver { border-color: #C0C0C0 !important; }
-  .border-bronze { border-color: #CD7F32 !important; }
-</style>
+                <!-- Performance Stats -->
+                <div class="d-flex flex-column gap-2 mx-auto" style="max-width: 250px;">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-body-secondary">Solved:</span>
+                    <span class="fw-bold">95 problems</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span class="text-body-secondary">Accuracy:</span>
+                    <span class="fw-bold">92% <small class="text-success">(+2.4%)</small></span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span class="text-body-secondary">Avg Time:</span>
+                    <span class="fw-bold">12.4 min</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span class="text-body-secondary">Streak:</span>
+                    <span class="fw-bold">14 days <i class="fas fa-fire text-danger ms-1"></i></span>
+                  </div>
+                </div>
+
+                <div class="progress mt-3 mx-auto" style="height: 6px; width: 80%;">
+                  <div class="progress-bar bg-gold" role="progressbar" style="width: 95%;" aria-valuenow="95"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Other Performers Box (Right) -->
+            <div class="col-md-8">
+              <div class="p-4">
+                <div class="row">
+                  <!-- 2nd Place -->
+                  <div class="col-md-3 col-6 mb-4">
+                    <div class="position-relative text-center">
+                      <span class="badge bg-silver rounded-circle position-absolute top-0 start-50 translate-middle"
+                        style="width: 30px; height: 30px; line-height: 30px;">2</span>
+                      <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                        class="avatar avatar-xl rounded-circle border border-3 border-silver mb-2" alt="Top performer">
+                      <h5 class="mb-1">Priya Patel</h5>
+                      <p class="text-body-secondary mb-1"><small>87 problems</small></p>
+                      <div class="d-flex justify-content-center gap-2">
+                        <span class="badge bg-success bg-opacity-10 text-success" style="font-size: 0.65rem;">89%</span>
+                        <span class="badge bg-info bg-opacity-10 text-info" style="font-size: 0.65rem;">14.2m</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 3rd Place -->
+                  <div class="col-md-3 col-6 mb-4">
+                    <div class="position-relative text-center">
+                      <span class="badge bg-bronze rounded-circle position-absolute top-0 start-50 translate-middle"
+                        style="width: 30px; height: 30px; line-height: 30px;">3</span>
+                      <img src="https://randomuser.me/api/portraits/men/75.jpg"
+                        class="avatar avatar-xl rounded-circle border border-3 border-bronze mb-2" alt="Top performer">
+                      <h5 class="mb-1">James Wilson</h5>
+                      <p class="text-body-secondary mb-1"><small>82 problems</small></p>
+                      <div class="d-flex justify-content-center gap-2">
+                        <span class="badge bg-success bg-opacity-10 text-success" style="font-size: 0.65rem;">86%</span>
+                        <span class="badge bg-info bg-opacity-10 text-info" style="font-size: 0.65rem;">15.7m</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 4th Place -->
+                  <div class="col-md-3 col-6 mb-4">
+                    <div class="position-relative text-center">
+                      <span class="badge bg-primary rounded-circle position-absolute top-0 start-50 translate-middle"
+                        style="width: 30px; height: 30px; line-height: 30px;">4</span>
+                      <img src="https://randomuser.me/api/portraits/women/68.jpg"
+                        class="avatar avatar-xl rounded-circle border border-3 border-primary mb-2" alt="Top performer">
+                      <h5 class="mb-1">Maria Garcia</h5>
+                      <p class="text-body-secondary mb-1"><small>78 problems</small></p>
+                      <div class="d-flex justify-content-center gap-2">
+                        <span class="badge bg-success bg-opacity-10 text-success" style="font-size: 0.65rem;">91%</span>
+                        <span class="badge bg-info bg-opacity-10 text-info" style="font-size: 0.65rem;">13.8m</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 5th Place -->
+                  <div class="col-md-3 col-6 mb-4">
+                    <div class="position-relative text-center">
+                      <span class="badge bg-primary rounded-circle position-absolute top-0 start-50 translate-middle"
+                        style="width: 30px; height: 30px; line-height: 30px;">5</span>
+                      <img src="https://randomuser.me/api/portraits/men/90.jpg"
+                        class="avatar avatar-xl rounded-circle border border-3 border-primary mb-2" alt="Top performer">
+                      <h5 class="mb-1">David Kim</h5>
+                      <p class="text-body-secondary mb-1"><small>75 problems</small></p>
+                      <div class="d-flex justify-content-center gap-2">
+                        <span class="badge bg-success bg-opacity-10 text-success" style="font-size: 0.65rem;">84%</span>
+                        <span class="badge bg-info bg-opacity-10 text-info" style="font-size: 0.65rem;">16.5m</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- View All Button -->
+                <div class="text-center mt-2">
+                  <a href="leaderboard.html" class="btn btn-outline-primary btn-sm">View Full Leaderboard <i
+                      class="fas fa-chevron-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <style>
+      /* Custom colors for podium positions */
+      .bg-gold {
+        background-color: #FFD700 !important;
+        color: #000 !important;
+      }
+
+      .bg-silver {
+        background-color: #C0C0C0 !important;
+        color: #000 !important;
+      }
+
+      .bg-bronze {
+        background-color: #CD7F32 !important;
+        color: #000 !important;
+      }
+
+      .border-gold {
+        border-color: #FFD700 !important;
+      }
+
+      .border-silver {
+        border-color: #C0C0C0 !important;
+      }
+
+      .border-bronze {
+        border-color: #CD7F32 !important;
+      }
+    </style>
     <!-- Content -->
     <div class="container-lg">
       <!-- Page content -->
-     
+
 
       <!-- Divider -->
       <hr class="my-8">
@@ -2159,40 +2210,40 @@
       <div class="row">
         <div class="col-12 col-xxl-8">
           <!-- Performance -->
-        
+
           <div class="card mb-6">
             <div class="card-header">
-                <div class="row align-items-center">
-                    <div class="col">
-                      <h3 class="fs-6 mb-0 text-start">Performance</h3>
-                    </div>
-                    <div class="col-auto fs-sm me-n3">
-                        <span class="material-symbols-outlined" style="color: #007bff;">
-                            circle
-                        </span>
-                        This Week
-                    </div>
-                    <div class="col-auto fs-sm">
-                        <span class="material-symbols-outlined" style="color: #555;">
-                            circle
-                        </span>
-                        Last Week
-                    </div>
+              <div class="row align-items-center">
+                <div class="col">
+                  <h3 class="fs-6 mb-0 text-start">Performance</h3>
                 </div>
+                <div class="col-auto fs-sm me-n3">
+                  <span class="material-symbols-outlined" style="color: #007bff;">
+                    circle
+                  </span>
+                  This Week
+                </div>
+                <div class="col-auto fs-sm">
+                  <span class="material-symbols-outlined" style="color: #555;">
+                    circle
+                  </span>
+                  Last Week
+                </div>
+              </div>
             </div>
             <div class="card-body">
-                <!-- <div class="chart">
+              <!-- <div class="chart">
                     <canvas class="chart-canvas" id="userPerformanceChart" width="806" height="350"
                         style="display: block; box-sizing: border-box; height: 350px; width: 806px;"></canvas>
                 </div> -->
-                <!-- weekchart -->
-                <div class="chart-container">
-                    <div class="chart" id="chart4"></div>
-                </div>
+              <!-- weekchart -->
+              <div class="chart-container">
+                <div class="chart" id="chart4"></div>
+              </div>
             </div>
-        </div>
+          </div>
 
-        
+
 
 
 
@@ -2484,78 +2535,78 @@
         <div class="col-12 col-xxl-4">
 
           <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<!-- Topic-wise Questions Solved (Horizontal Bar Chart) -->
-<div class="col-12 mb-6">
-    <div class="card">
-        <div class="card-header">
-            <h3 class="fs-6 mb-0 text-start">Topic-wise Questions Solved</h3>
-        </div>
-        <div class="card-body">
-            <canvas id="topicWiseQuestionsSolvedChart" height="300"></canvas>
-        </div>
-    </div>
-</div>
+          <!-- Topic-wise Questions Solved (Horizontal Bar Chart) -->
+          <div class="col-12 mb-6">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="fs-6 mb-0 text-start">Topic-wise Questions Solved</h3>
+              </div>
+              <div class="card-body">
+                <canvas id="topicWiseQuestionsSolvedChart" height="300"></canvas>
+              </div>
+            </div>
+          </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Topic-wise Questions Solved (Horizontal Bar Chart)
-        const questionsSolvedCtx = document.getElementById('topicWiseQuestionsSolvedChart').getContext('2d');
-        const topicWiseQuestionsSolvedChart = new Chart(questionsSolvedCtx, {
-            type: 'bar',
-            data: {
-                labels: ['Arrays', 'Strings', 'Graphs', 'Trees', 'DP', 'SQL', 'Recursion', 'Sorting'],
-                datasets: [{
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              // Topic-wise Questions Solved (Horizontal Bar Chart)
+              const questionsSolvedCtx = document.getElementById('topicWiseQuestionsSolvedChart').getContext('2d');
+              const topicWiseQuestionsSolvedChart = new Chart(questionsSolvedCtx, {
+                type: 'bar',
+                data: {
+                  labels: ['Arrays', 'Strings', 'Graphs', 'Trees', 'DP', 'SQL', 'Recursion', 'Sorting'],
+                  datasets: [{
                     label: 'Problems Solved',
                     data: [45, 30, 25, 20, 15, 40, 35, 10],
                     backgroundColor: [
-                        '#4e73df', '#1cc88a', '#36b9cc', '#f6c23e', 
-                        '#e74a3b', '#858796', '#5a5c69', '#3a3b45'
+                      '#4e73df', '#1cc88a', '#36b9cc', '#f6c23e',
+                      '#e74a3b', '#858796', '#5a5c69', '#3a3b45'
                     ],
                     borderColor: [
-                        '#4e73df', '#1cc88a', '#36b9cc', '#f6c23e', 
-                        '#e74a3b', '#858796', '#5a5c69', '#3a3b45'
+                      '#4e73df', '#1cc88a', '#36b9cc', '#f6c23e',
+                      '#e74a3b', '#858796', '#5a5c69', '#3a3b45'
                     ],
                     borderWidth: 1
-                }]
-            },
-            options: {
-                indexAxis: 'y',
-                responsive: true,
-                plugins: {
+                  }]
+                },
+                options: {
+                  indexAxis: 'y',
+                  responsive: true,
+                  plugins: {
                     legend: {
-                        display: false
+                      display: false
                     },
                     tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                return context.parsed.x + ' problems';
-                            }
+                      callbacks: {
+                        label: function (context) {
+                          return context.parsed.x + ' problems';
                         }
+                      }
                     }
-                },
-                scales: {
+                  },
+                  scales: {
                     x: {
-                        beginAtZero: true,
-                        title: {
-                            display: true,
-                            text: 'Number of Problems Solved'
-                        }
+                      beginAtZero: true,
+                      title: {
+                        display: true,
+                        text: 'Number of Problems Solved'
+                      }
                     },
                     y: {
-                        title: {
-                            display: true,
-                            text: 'Topics'
-                        }
+                      title: {
+                        display: true,
+                        text: 'Topics'
+                      }
                     }
+                  }
                 }
-            }
-        });
-    });
-</script>
+              });
+            });
+          </script>
           <!-- Goals -->
-       
 
-         
+
+
         </div>
       </div>
     </div>
@@ -2580,24 +2631,64 @@
 
 <!-- weekchart -->
 <script>
-   const currentWeek = [
-      { day: "Mon", work: 15 },
-      { day: "Tue", work: 28 },
-      { day: "Wed", work: 24 },
-      { day: "Thu", work: 33 },
-      { day: "Fri", work: 42 },
-      { day: "Sat", work: 12 },
-      { day: "Sun", work: 20 }
+  const currentWeek = [{
+      day: "Mon",
+      work: 15
+    },
+    {
+      day: "Tue",
+      work: 28
+    },
+    {
+      day: "Wed",
+      work: 24
+    },
+    {
+      day: "Thu",
+      work: 33
+    },
+    {
+      day: "Fri",
+      work: 42
+    },
+    {
+      day: "Sat",
+      work: 12
+    },
+    {
+      day: "Sun",
+      work: 20
+    }
   ];
 
-  const previousWeek = [
-      { day: "Mon", work: 10 },
-      { day: "Tue", work: 22 },
-      { day: "Wed", work: 18 },
-      { day: "Thu", work: 27 },
-      { day: "Fri", work: 35 },
-      { day: "Sat", work: 8 },
-      { day: "Sun", work: 15 }
+  const previousWeek = [{
+      day: "Mon",
+      work: 10
+    },
+    {
+      day: "Tue",
+      work: 22
+    },
+    {
+      day: "Wed",
+      work: 18
+    },
+    {
+      day: "Thu",
+      work: 27
+    },
+    {
+      day: "Fri",
+      work: 35
+    },
+    {
+      day: "Sat",
+      work: 8
+    },
+    {
+      day: "Sun",
+      work: 15
+    }
   ];
 
   const currentWeekColor = "#007bff"; // Blue
@@ -2606,57 +2697,57 @@
   const chart = document.getElementById("chart4");
 
   currentWeek.forEach((item, index) => {
-      const prevWork = previousWeek[index].work;
+    const prevWork = previousWeek[index].work;
 
-      const barContainer = document.createElement("div");
-      barContainer.className = "bar-container";
+    const barContainer = document.createElement("div");
+    barContainer.className = "bar-container";
 
-      const barGroup = document.createElement("div");
-      barGroup.className = "bar-group";
+    const barGroup = document.createElement("div");
+    barGroup.className = "bar-group";
 
-      // Create bars
-      const currBar = document.createElement("div");
-      currBar.className = "bar";
-      currBar.style.height = `${item.work * 5}px`;
-      currBar.style.backgroundColor = currentWeekColor;
-      currBar.style.animationDelay = `${index * 0.2}s`;
+    // Create bars
+    const currBar = document.createElement("div");
+    currBar.className = "bar";
+    currBar.style.height = `${item.work * 5}px`;
+    currBar.style.backgroundColor = currentWeekColor;
+    currBar.style.animationDelay = `${index * 0.2}s`;
 
-      const prevBar = document.createElement("div");
-      prevBar.className = "bar";
-      prevBar.style.height = `${prevWork * 5}px`;
-      prevBar.style.backgroundColor = previousWeekColor;
-      prevBar.style.animationDelay = `${index * 0.2 + 0.2}s`;
+    const prevBar = document.createElement("div");
+    prevBar.className = "bar";
+    prevBar.style.height = `${prevWork * 5}px`;
+    prevBar.style.backgroundColor = previousWeekColor;
+    prevBar.style.animationDelay = `${index * 0.2 + 0.2}s`;
 
-      // Create Value Labels & Position Them
-      const currentValueLabel = document.createElement("div");
-      currentValueLabel.className = "value-label current-value";
-      currentValueLabel.innerText = item.work;
-      currentValueLabel.style.animationDelay = `${index * 0.2}s`;
-      currentValueLabel.style.bottom = `${item.work * 5 + 5}px`;
-      currentValueLabel.style.left = "15px";
+    // Create Value Labels & Position Them
+    const currentValueLabel = document.createElement("div");
+    currentValueLabel.className = "value-label current-value";
+    currentValueLabel.innerText = item.work;
+    currentValueLabel.style.animationDelay = `${index * 0.2}s`;
+    currentValueLabel.style.bottom = `${item.work * 5 + 5}px`;
+    currentValueLabel.style.left = "15px";
 
-      const previousValueLabel = document.createElement("div");
-      previousValueLabel.className = "value-label previous-value";
-      previousValueLabel.innerText = prevWork;
-      previousValueLabel.style.animationDelay = `${index * 0.2}s`;
-      previousValueLabel.style.bottom = `${prevWork * 5 + 5}px`;
-      previousValueLabel.style.left = "55px";
+    const previousValueLabel = document.createElement("div");
+    previousValueLabel.className = "value-label previous-value";
+    previousValueLabel.innerText = prevWork;
+    previousValueLabel.style.animationDelay = `${index * 0.2}s`;
+    previousValueLabel.style.bottom = `${prevWork * 5 + 5}px`;
+    previousValueLabel.style.left = "55px";
 
-      // Create Labels (Days)
-      const label = document.createElement("div");
-      label.className = "label";
-      label.innerText = item.day;
-      label.style.animationDelay = `${index * 0.2 + 0.5}s`;
+    // Create Labels (Days)
+    const label = document.createElement("div");
+    label.className = "label";
+    label.innerText = item.day;
+    label.style.animationDelay = `${index * 0.2 + 0.5}s`;
 
-      // Append elements
-      barGroup.appendChild(currBar);
-      barGroup.appendChild(prevBar);
-      barContainer.appendChild(currentValueLabel);
-      barContainer.appendChild(previousValueLabel);
-      barContainer.appendChild(barGroup);
-      barContainer.appendChild(label);
-      chart.appendChild(barContainer);
+    // Append elements
+    barGroup.appendChild(currBar);
+    barGroup.appendChild(prevBar);
+    barContainer.appendChild(currentValueLabel);
+    barContainer.appendChild(previousValueLabel);
+    barContainer.appendChild(barGroup);
+    barContainer.appendChild(label);
+    chart.appendChild(barContainer);
   });
-
 </script>
+
 </html>
