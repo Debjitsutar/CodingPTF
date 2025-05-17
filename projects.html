@@ -1,4 +1,4 @@
-<html lang="en" data-bs-theme="dark" data-bs-navigation-position="sidenav"><head><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><style data-fullcalendar=""></style><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+<html lang="en" data-bs-theme="dark" data-bs-navigation-position="sidenav"><head><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><style data-fullcalendar=""></style><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
@@ -152,113 +152,7 @@
  
    
 
-document.addEventListener("DOMContentLoaded", function () {
-  const statusDropdowns = document.querySelectorAll('.status-select');
-  const checkboxes = document.querySelectorAll('.review-checkbox');
-  const completedCountElement = document.getElementById('completedCount');
-  const totalPrograms = statusDropdowns.length;
-  const searchInput = document.getElementById('questionSearch');
-  const tableRows = document.querySelectorAll('.table tbody tr');
-
-  function updateCompletedCount() {
-    const completedCount = Array.from(statusDropdowns).filter(select => select.value === 'Completed').length;
-    completedCountElement.textContent = `${completedCount} out of ${totalPrograms} programs completed`;
-  }
-
-  function applyColorClass(select) {
-    select.classList.remove('text-danger', 'text-warning', 'text-success', 'text-primary');
-
-    switch (select.value) {
-      case 'Untouched':
-        select.classList.add('text-danger');
-        break;
-      case 'In Progress':
-        select.classList.add('text-warning');
-        break;
-      case 'Completed':
-        select.classList.add('text-success');
-        break;
-      case 'Review':
-        select.classList.add('text-primary');
-        break;
-    }
-  }
-
-  function handleStatusChange(select, index) {
-  const value = select.value;
-  const checkbox = checkboxes[index];
-
-  // Checkbox logic
-  if (value === 'Completed' || value === 'Review') {
-    checkbox.checked = true;
-  } else {
-    checkbox.checked = false;
-  }
-
-  updateCompletedCount();
-  applyColorClass(select);
-
-  // If status is Review, open the review link but don't reset status
-  if (value === 'Review') {
-    const reviewLink = select.getAttribute('data-review-link');
-    if (reviewLink) {
-      window.open(reviewLink, '_blank'); // Just open the review link
-    }
-  }
-}
-
-
-  // Initialize all dropdowns
-  statusDropdowns.forEach((select, index) => {
-    applyColorClass(select);
-
-    // Initial checkbox sync
-    if (select.value === 'Completed' || select.value === 'Review') {
-      checkboxes[index].checked = true;
-    }
-
-    select.addEventListener('change', () => handleStatusChange(select, index));
-  });
-
-  updateCompletedCount();
-
-  // Search feature
-  if (searchInput) {
-  searchInput.addEventListener('input', function () {
-    const searchTerm = this.value.toLowerCase();
-
-    tableRows.forEach(row => {
-      // Question text
-      const questionCell = row.cells[1];
-      const titleDiv = questionCell.querySelector('div.ms-4 > div');
-      const questionText = titleDiv ? titleDiv.textContent.toLowerCase() : "";
-
-      // Status value
-      const statusSelect = row.querySelector('.status-select');
-      const statusText = statusSelect ? statusSelect.value.toLowerCase() : "";
-
-      // Company logos
-      const companyCell = row.cells[row.cells.length - 1];
-      const companyImgs = companyCell ? companyCell.querySelectorAll('img') : [];
-      let companyMatch = false;
-
-      companyImgs.forEach(img => {
-        const src = img.getAttribute('src').toLowerCase();
-        if (src.includes(searchTerm)) {
-          companyMatch = true;
-        }
-      });
-
-      // Match logic
-      const matches = questionText.includes(searchTerm) || statusText.includes(searchTerm) || companyMatch;
-      row.style.display = matches ? '' : 'none';
-    });
-  });
-}
-});
-</script>
-
-
+  </script> 
    <!-- Favicon -->
   <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon">
 
@@ -332,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="row mb-3 text-start">
               <div class="col-md-4">
                 <label class="form-label d-block text-start">First Name</label>
-                <input type="text" class="form-control" placeholder="First" required>
+                <input type="text" class="form-control" placeholder="First" required="">
               </div>
               <div class="col-md-4">
                 <label class="form-label d-block text-start">Middle Name</label>
@@ -340,44 +234,44 @@ document.addEventListener("DOMContentLoaded", function () {
               </div>
               <div class="col-md-4">
                 <label class="form-label d-block text-start">Last Name</label>
-                <input type="text" class="form-control" placeholder="Last" required>
+                <input type="text" class="form-control" placeholder="Last" required="">
               </div>
             </div>
 
             <!-- Email -->
             <div class="mb-3 text-start">
               <label class="form-label d-block text-start">Email</label>
-              <input type="email" class="form-control" placeholder="you@example.com" required>
+              <input type="email" class="form-control" placeholder="you@example.com" required="">
             </div>
 
             <!-- Passwords -->
             <div class="row mb-3 text-start">
               <div class="col-md-6">
                 <label class="form-label d-block text-start">Password</label>
-                <input type="password" class="form-control" placeholder="••••••••" required>
+                <input type="password" class="form-control" placeholder="••••••••" required="">
               </div>
               <div class="col-md-6">
                 <label class="form-label d-block text-start">Confirm Password</label>
-                <input type="password" class="form-control" placeholder="••••••••" required>
+                <input type="password" class="form-control" placeholder="••••••••" required="">
               </div>
             </div>
 
             <!-- College Info -->
             <div class="mb-3 text-start">
               <label class="form-label d-block text-start">College/University Name</label>
-              <input type="text" class="form-control" placeholder="Your college name" required>
+              <input type="text" class="form-control" placeholder="Your college name" required="">
             </div>
 
             <!-- Branch and Year -->
             <div class="row mb-3 text-start">
               <div class="col-md-6">
                 <label class="form-label d-block text-start">Branch/Department</label>
-                <input type="text" class="form-control" placeholder="e.g. Computer Science" required>
+                <input type="text" class="form-control" placeholder="e.g. Computer Science" required="">
               </div>
               <div class="col-md-6">
                 <label class="form-label d-block text-start">Passing Year</label>
                 <select class="form-select">
-                  <option value="" disabled selected>Select year</option>
+                  <option value="" disabled="" selected="">Select year</option>
                   <option>2023</option>
                   <option>2024</option>
                   <option>2025</option>
@@ -504,7 +398,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
 
       <!-- Toggler -->
-      <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#sidenavLargeCollapse" aria-controls="sidenavLargeCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#sidenavLargeCollapse" aria-controls="sidenavLargeCollapse" aria-expanded="false" aria-label="Toggle navigation" fdprocessedid="yaj6hk">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -804,9 +698,9 @@ document.addEventListener("DOMContentLoaded", function () {
                   <span class="material-symbols-outlined">text_fields</span>&nbsp; Strings
               </a>
               <div class="dropdown-menu">
-                  <a class="dropdown-item " href="./projects/projects.html">Easy</a>
-                  <a class="dropdown-item " href="./projects/project.html">Medium</a>
-                  <a class="dropdown-item " href="./projects/project-new.html">Hard</a>
+                  <a class="dropdown-item " href="string1.html">Easy</a>
+                  <a class="dropdown-item " href="string2.html">Medium</a>
+                  <a class="dropdown-item " href="string3.html">Hard</a>
               </div>
           </div>
           <div class="nav-item dropdown">
@@ -815,8 +709,8 @@ document.addEventListener("DOMContentLoaded", function () {
               </a>
               <div class="dropdown-menu">
                   <a class="dropdown-item " href="trees1.html">Easy</a>
-                  <a class="dropdown-item " href="./projects/project.html">Medium</a>
-                  <a class="dropdown-item " href="./projects/project-new.html">Hard</a>
+                  <a class="dropdown-item " href="trees2.html">Medium</a>
+                  <a class="dropdown-item " href="trees3.html">Hard</a>
               </div>
           </div>
           <div class="nav-item dropdown">
@@ -1140,7 +1034,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                 </div>
                 <div class="card-body">
-                    <canvas id="dateWiseSubmissionsChart" height="600" width="996" style="display: block; box-sizing: border-box; height: 300px; width: 498px;"></canvas>
+                    <canvas id="dateWiseSubmissionsChart" height="600" width="601" style="display: block; box-sizing: border-box; height: 300px; width: 300px;"></canvas>
                 <div id="chart-tooltip" role="tooltip" class="popover bs-popover-top" style="visibility: hidden; left: 275.79px; top: 216.833px; transform: translateX(-50%) translateY(-100%) translateY(-1rem);"><div class="popover-arrow translate-middle-x"></div><div class="popover-content"><h3 class="popover-header"><span class="d-block text-center text-nowrap">Wed</span></h3><div class="popover-body d-flex flex-column gap-1"><div class="d-flex text-nowrap justify-content-left"><span class="material-symbols-outlined me-1" style="color: rgb(78, 115, 223);">circle</span><span>Your Submissions: 12</span></div><div class="d-flex text-nowrap justify-content-left"><span class="material-symbols-outlined me-1" style="color: rgb(133, 135, 150);">circle</span><span>Community Average: 14</span></div></div></div></div></div>
             </div>
         </div>
@@ -1166,7 +1060,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="slice s1-3-0" style="transform: rotate(246.66deg) translate3d(0px, 0px, 0px);">
                     <span style="transform: rotate(-66.6596deg) translate3d(0px, 0px, 0px); background-color: rgb(12, 155, 25);"></span>
                 </div>
-            </div>
+            <div class="slice s1-0-0" style="transform: rotate(-1deg) translate3d(0px, 0px, 0px);"><span style="transform: rotate(-158.574deg) translate3d(0px, 0px, 0px); background-color: red;"></span></div><div class="slice s1-1-0" style="transform: rotate(19.4255deg) translate3d(0px, 0px, 0px);"><span style="transform: rotate(-125.383deg) translate3d(0px, 0px, 0px); background-color: rgb(0, 102, 204);"></span></div><div class="slice s1-2-0" style="transform: rotate(73.0426deg) translate3d(0px, 0px, 0px);"><span style="transform: rotate(-5.38298deg) translate3d(0px, 0px, 0px); background-color: rgb(255, 193, 7);"></span></div><div class="slice s1-3-0" style="transform: rotate(246.66deg) translate3d(0px, 0px, 0px);"><span style="transform: rotate(-66.6596deg) translate3d(0px, 0px, 0px); background-color: rgb(12, 155, 25);"></span></div></div>
             <ul class="pieID legend" style="margin-top: 5px; margin-bottom: 5px;">  <!-- Reduced legend margins -->
                 <li style="border-color: red; padding: 0.25em 0.5em;">  <!-- Reduced padding -->
                     <em>Unattempted</em>
@@ -1375,7 +1269,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="col-12 col-lg-auto mb-3 mb-lg-0">
                   <div class="row align-items-center">
                     <div class="col-auto">
-                      <div class="text-body-secondary" id="completedCount">0 out of 10 programs completed</div>
+                      <div class="text-body-secondary" id="completedCount">2 out of 10 programs completed</div>
                     </div>
                     
                   </div>
@@ -1384,7 +1278,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   <div class="row gx-3">
                     <div class="col col-lg-auto ms-auto">
                       <div class="input-group bg-body">
-                        <input type="text" class="form-control" id="questionSearch" placeholder="Search questions, company, or status">
+                        <input type="text" class="form-control" id="questionSearch" placeholder="Search questions, company, or status" fdprocessedid="i7l8a">
 
 
                         <span class="input-group-text" id="search">
@@ -1517,7 +1411,7 @@ document.addEventListener("DOMContentLoaded", function () {
   <table class="table table-selectable align-middle mb-0">
     <thead>
       <tr>
-        <th>Review</th>
+        
         <th style="padding-left: 39px">Questions</th>
         <th>Language</th>
         <th>Practice</th>
@@ -1525,9 +1419,236 @@ document.addEventListener("DOMContentLoaded", function () {
         <th>Company</th>
       </tr>
     </thead>
-    <tbody id="questions-table-body">
-      <!-- This will be populated by JavaScript -->
-    </tbody>
+    <tbody id="questions-table-body"><tr><td>
+                <div class="d-flex align-items-center">
+                    <div class="ms-4">
+                        <div>Largest element in an array</div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="avatar-group">
+                    <div class="avatar avatar-xs">
+                            <img class="avatar-img" src="java.png" alt="Java">
+                        </div><div class="avatar avatar-xs">
+                            <img class="avatar-img" src="c++.png" alt="C++">
+                        </div><div class="avatar avatar-xs">
+                            <img class="avatar-img" src="python.png" alt="Python">
+                        </div><div class="avatar avatar-xs">
+                            <img class="avatar-img" src="c.png" alt="C">
+                        </div>
+                </div>
+            </td>
+            <td>
+                <div class="avatar-group">
+                    <div class="avatar avatar-xs" style="margin-left: 1.2vw;">
+                        <a href="https://www.geeksforgeeks.org/problems/largest-element-in-array4009/0">
+                            <img class="avatar-img" src="gfg.png" alt="Practice site" style="width: 39px; height: 23px;">
+                        </a>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <select class="form-select form-select-sm border-0 status-select text-danger" style="width: auto;" data-question-id="1" fdprocessedid="alzoio">
+                    <option class="text-danger" value="Unattempted">Unattempted</option>
+                    <option class="text-warning" value="In Progress">In Progress</option>
+                    <option class="text-success" value="Completed">Completed</option>
+                    <option class="text-primary" value="Review">Review</option>
+                </select>
+            </td>
+            <td>
+                <div class="avatar-group">
+                    <div class="avatar avatar-xs">
+                            <img class="avatar-img" src="tcs.jpg" alt="tcs">
+                        </div><div class="avatar avatar-xs">
+                            <img class="avatar-img" src="accenture.png" alt="accenture">
+                        </div>
+                </div>
+            </td></tr><tr style="background-color: rgb(249, 249, 249);"><td>
+                <div class="d-flex align-items-center">
+                    <div class="ms-4">
+                        <div>Second largest element in an array</div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="avatar-group">
+                    <div class="avatar avatar-xs">
+                            <img class="avatar-img" src="java.png" alt="Java">
+                        </div><div class="avatar avatar-xs">
+                            <img class="avatar-img" src="python.png" alt="Python">
+                        </div><div class="avatar avatar-xs">
+                            <img class="avatar-img" src="c.png" alt="C">
+                        </div>
+                </div>
+            </td>
+            <td>
+                <div class="avatar-group">
+                    <div class="avatar avatar-xs" style="margin-left: 1.2vw;">
+                        <a href="https://www.geeksforgeeks.org/problems/second-largest3735/1">
+                            <img class="avatar-img" src="gfg.png" alt="Practice site" style="width: 39px; height: 23px;">
+                        </a>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <select class="form-select form-select-sm border-0 status-select text-success" style="width: auto;" data-question-id="2" fdprocessedid="vf9tyo">
+                    <option class="text-danger" value="Unattempted">Unattempted</option>
+                    <option class="text-warning" value="In Progress">In Progress</option>
+                    <option class="text-success" value="Completed" selected="">Completed</option>
+                    <option class="text-primary" value="Review">Review</option>
+                </select>
+            </td>
+            <td>
+                <div class="avatar-group">
+                    <div class="avatar avatar-xs">
+                            <img class="avatar-img" src="microsoft.png" alt="microsoft">
+                        </div><div class="avatar avatar-xs">
+                            <img class="avatar-img" src="amazon.jpeg" alt="amazon">
+                        </div><div class="avatar avatar-xs">
+                            <img class="avatar-img" src="Capgemini.jpg" alt="Capgemini">
+                        </div><div class="avatar avatar-xs">
+                            <img class="avatar-img" src="accenture.png" alt="accenture">
+                        </div>
+                </div>
+            </td></tr><tr><td>
+                <div class="d-flex align-items-center">
+                    <div class="ms-4">
+                        <div>Check if array is sorted</div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="avatar-group">
+                    <div class="avatar avatar-xs">
+                            <img class="avatar-img" src="java.png" alt="Java">
+                        </div><div class="avatar avatar-xs">
+                            <img class="avatar-img" src="c++.png" alt="C++">
+                        </div><div class="avatar avatar-xs">
+                            <img class="avatar-img" src="python.png" alt="Python">
+                        </div><div class="avatar avatar-xs">
+                            <img class="avatar-img" src="c.png" alt="C">
+                        </div>
+                </div>
+            </td>
+            <td>
+                <div class="avatar-group">
+                    <div class="avatar avatar-xs" style="margin-left: 1.2vw;">
+                        <a href="https://www.naukri.com/code360/problems/ninja-and-the-sorted-check_6581957">
+                            <img class="avatar-img" src="cn.png" alt="Practice site" style="">
+                        </a>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <select class="form-select form-select-sm border-0 status-select text-danger" style="width: auto;" data-question-id="3" fdprocessedid="sn6geb">
+                    <option class="text-danger" value="Unattempted" selected="">Unattempted</option>
+                    <option class="text-warning" value="In Progress">In Progress</option>
+                    <option class="text-success" value="Completed">Completed</option>
+                    <option class="text-primary" value="Review">Review</option>
+                </select>
+            </td>
+            <td>
+                <div class="avatar-group">
+                    <div class="avatar avatar-xs">
+                            <img class="avatar-img" src="google.png" alt="google">
+                        </div><div class="avatar avatar-xs">
+                            <img class="avatar-img" src="amazon.jpeg" alt="amazon">
+                        </div><div class="avatar avatar-xs">
+                            <img class="avatar-img" src="tcs.jpg" alt="tcs">
+                        </div>
+                </div>
+            </td></tr><tr style="background-color: rgb(249, 249, 249);"><td>
+                <div class="d-flex align-items-center">
+                    <div class="ms-4">
+                        <div>Remove duplicates from sorted array</div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="avatar-group">
+                    <div class="avatar avatar-xs">
+                            <img class="avatar-img" src="java.png" alt="Java">
+                        </div><div class="avatar avatar-xs">
+                            <img class="avatar-img" src="c++.png" alt="C++">
+                        </div><div class="avatar avatar-xs">
+                            <img class="avatar-img" src="python.png" alt="Python">
+                        </div>
+                </div>
+            </td>
+            <td>
+                <div class="avatar-group">
+                    <div class="avatar avatar-xs" style="margin-left: 1.2vw;">
+                        <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/">
+                            <img class="avatar-img" src="leetcode.png" alt="Practice site" style="">
+                        </a>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <select class="form-select form-select-sm border-0 status-select text-warning" style="width: auto;" data-question-id="4" fdprocessedid="y8gzk1h">
+                    <option class="text-danger" value="Unattempted">Unattempted</option>
+                    <option class="text-warning" value="In Progress" selected="">In Progress</option>
+                    <option class="text-success" value="Completed">Completed</option>
+                    <option class="text-primary" value="Review">Review</option>
+                </select>
+            </td>
+            <td>
+                <div class="avatar-group">
+                    <div class="avatar avatar-xs">
+                            <img class="avatar-img" src="microsoft.png" alt="microsoft">
+                        </div><div class="avatar avatar-xs">
+                            <img class="avatar-img" src="google.png" alt="google">
+                        </div><div class="avatar avatar-xs">
+                            <img class="avatar-img" src="amazon.jpeg" alt="amazon">
+                        </div>
+                </div>
+            </td></tr><tr><td>
+                <div class="d-flex align-items-center">
+                    <div class="ms-4">
+                        <div>Rotate an array by one place</div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="avatar-group">
+                    <div class="avatar avatar-xs">
+                            <img class="avatar-img" src="c++.png" alt="C++">
+                        </div><div class="avatar avatar-xs">
+                            <img class="avatar-img" src="python.png" alt="Python">
+                        </div><div class="avatar avatar-xs">
+                            <img class="avatar-img" src="c.png" alt="C">
+                        </div>
+                </div>
+            </td>
+            <td>
+                <div class="avatar-group">
+                    <div class="avatar avatar-xs" style="margin-left: 1.2vw;">
+                        <a href="https://leetcode.com/problems/rotate-array/">
+                            <img class="avatar-img" src="leetcode.png" alt="Practice site" style="">
+                        </a>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <select class="form-select form-select-sm border-0 status-select text-danger" style="width: auto;" data-question-id="5" fdprocessedid="h9el5">
+                    <option class="text-danger" value="Unattempted">Unattempted</option>
+                    <option class="text-warning" value="In Progress">In Progress</option>
+                    <option class="text-success" value="Completed">Completed</option>
+                    <option class="text-primary" value="Review">Review</option>
+                </select>
+            </td>
+            <td>
+                <div class="avatar-group">
+                    <div class="avatar avatar-xs">
+                            <img class="avatar-img" src="Capgemini.jpg" alt="Capgemini">
+                        </div><div class="avatar avatar-xs">
+                            <img class="avatar-img" src="tcs.jpg" alt="tcs">
+                        </div><div class="avatar avatar-xs">
+                            <img class="avatar-img" src="accenture.png" alt="accenture">
+                        </div>
+                </div>
+            </td></tr></tbody>
   </table>
 </div>
       <div class="row align-items-center">
@@ -1537,12 +1658,12 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div class="col-auto">
           <nav aria-label="Page navigation">
-  <ul class="pagination mb-0" id="pagination-container"></ul>
+  <ul class="pagination mb-0" id="pagination-container"><li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li><li class="page-item active"><a class="page-link" href="#">1</a></li><li class="page-item"><a class="page-link" href="#">2</a></li><li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li></ul>
 </nav>
         </div>
       </div>
     </div>
-  </main>
+  </div></div></main>
 
   <!-- JAVASCRIPT -->
   <!-- Map JS -->
@@ -1862,4 +1983,4 @@ else {
 </script>
 
 <script src="projects.js"></script>
-</body></html>
+<span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body></html>
